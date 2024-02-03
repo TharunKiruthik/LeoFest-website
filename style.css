@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    font-family: 'Poppins',sans-serif;
+}
+
+*::selection{
+    background: #f00;
+    color: #fff;
+}
+:root{
+    --primary-color: #f9f9f9;
+    --secondary-color: #222;
+}
+
+html{
+    font-size: 62%;
+    overflow-x: hidden ;
+}
+body{
+    background: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #bbbbbb;
+}
+.home{
+    padding: 0 9%;
+    min-height: 100vh;
+}
+header{ 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+/* From https://css.glass */
+background: rgba(255, 255, 255, 0.55);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(8.6px);
+-webkit-backdrop-filter: blur(8.6px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+header .bitlogo{
+    position: relative;
+    width: 8rem;
+    height: 8rem;
+}
+header .bitlogo1{
+    position: relative;
+    width: 8rem;
+    height: 8rem;
+}
+header .navbar a{
+    display: inline-block;
+    font-size: 1.7rem;
+    margin-left: 3rem;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+header .navbar a:hover{
+    color:  red;
+}
+header .bg-nav{
+    display: none;
+}
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.BIT{
+    margin-top: 5rem;
+    margin-left: 35%;
+    align-items: center;
+    justify-content: center;
+}
+.home .content h3 {
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4.4rem;
+    padding-top: 5;
+    color: goldenrod;
+    line-height: 5.3rem;
+}
+.home .content p {
+    font-size: 1.6rem;
+    color: var(--secondary-color);
+    padding: 1rem 0;
+}
+.home .image{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200rem;
+}
+.home .image .lion{
+    position: absolute;
+    width: 50%;
+
+}
+.home .image .garuda{
+    position: absolute;
+    width: 80%;
+    opacity:.1;
+    z-index: -2;
+}
+.toggle-btn{
+    position: relative;
+    font-size: 3rem;
+    color: var(--secondary-color);
+    cursor: pointer;
+    display: none;
+}
+
+
+@media(max-width:992px){
+    html{
+        font-size: 60%;
+    }
+    section{
+        padding: 0 5%;
+    }
+    header{
+        padding:2rem 5%;
+    }
+    .home .content h3{
+        font-size: 3.3rem;
+        line-height: 2.5rem;
+    }
+}
+
+@media(max-width:768px){
+    html{
+        font-size: 59%;
+    }
+    .toggle-btn{
+        display: block;
+    }
+    header .navbar{
+        position: absolute;
+        left: 0;
+        top: -300px;
+        width: 100%;
+        background: var(--primary-color);
+        padding: 1rem 5%;
+        box-shadow: 0.5rem 1 rem rgba(0,0,0,.1);
+        border-top: .1rem solid rgba(0,0,0,.2);
+        overflow: hidden;
+        transform: .8s;
+        z-index: -2;
+    }
+    header .navbar.slide{
+        top: 100%;
+    }
+    header .navbar a{
+        display: block;
+        margin: 2rem 0;
+        font-size: 1.8rem;
+    }
+    header .bitlogo1{
+        position: absolute;
+        right: 12%;   
+    }
+    header .bg-nav{
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 78px;
+        background: var(--primary-color);
+        z-index: -1;
+        transition: 1s;
+    }
+    section{
+        padding: 2rem 5%;
+    }
+    .home{
+        flex-direction: column;
+    }
+    .home .image{
+        width: 50rem;
+        height: 20rem;
+        margin-top: -5rem;
+    }
+}
+
+@media(max-width:660px){
+    html{
+        font-size: 55%;
+    }
+    header .navbar.slide{
+        top: 78px;
+    }
+}
+@media(max-width:434px){
+    .home .image{
+         width: 40rem;
+    }
+}
+@media(max-width:330px){
+    html{
+        font-size: 50%;
+    }
+    head .bitlogo1{
+        right: 15%;
+    }
+    .home .image{
+        width: 40rem;
+        height:25rem;
+    }
+}
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: auto;
+    background-color: #2d2e33;
+    padding: 60px 10%;
+}
+
+ul{
+    list-style: none;
+}
+
+.footer-col{
+    width: 25%;
+}
+
+.footer-col h4{
+    position: relative;
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 22px;
+    color: #f1bc0d;
+    text-transform: capitalize;
+}
+
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    background-color: #27c0ac;
+    height: 2px;
+    width: 40px;
+}
+
+ul li:not(:last-child){
+    margin-bottom: 8px;
+}
+
+ul li a{
+    display: block;
+    font-size: 19px;
+    text-transform: capitalize;
+    color: #bdb6b6;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+ul li a:hover{
+    color: white;
+    padding-left: 2px;
+}
+
+.links a{
+    display: inline-block;
+    height: 44px;
+    width: 44px;
+    color: white;
+    background-color: rgba(40, 130, 214, 0.8);
+    margin: 0 8px 8px 0;
+    text-align: center;
+    line-height: 44px;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.links a:hover{
+    color: #4d4f55;
+    background-color: white;
+}
+
+@media(max-width: 740px){
+    .footer-col{
+        width: 50%;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .footer-col h4::before{
+        all: unset;
+    }
+}
+
+@media(max-width: 555px){
+    .footer-col{
+        width: 100%;
+    }
+}
