@@ -8,29 +8,87 @@
     <title>About</title>
 </head>
 <body>
-    <style>
-    body{
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins", sans-serif;
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    font-family: 'Poppins',sans-serif;
+    }
+    *::selection{
+    background: #f00;
+    color: #fff;
 }
-*{
-    box-sizing: border-box;
+:root{
+    --primary-color: #f14f4f;
+    --secondary-color: #ffffff;
 }
+
+html{
+    font-size: 62%;
+    overflow-x: hidden ;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+header{ 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    z-index: 1000;
+    height:fit-content;
+    background-color: rgba(26, 26, 36, 0.765);
+}
+header .bitlogo{
+    position: relative;
+    width: 8rem;
+    height: 8rem;
+}
+header .bitlogo1{
+    position: relative;
+    width: 8rem;
+    height: 8rem;
+}
+header .navbar a{
+    display:inline-block;
+    justify-content:center;
+    font-size: 1.7rem;
+    margin-left: 3rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+header .navbar a:hover{
+    color:  red;
+}
+header .bg-nav{
+    display: none;
+}
+/* nav end*/
 a{
     text-decoration: none;
 }
 #team{
-    margin-top: 6rem;
+    margin-top: 15rem;
     width: 100%;
-    min-height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: left;
     align-items:left;
     flex-direction: column;
 }
 h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #f1bc0d;
     font-weight: 500;
     display: flex;
@@ -93,13 +151,28 @@ h1 {
         flex-grow: 0.7;
     }
 }
+/*nav*/
+
     </style>
+<header>
+    <img src="images/bit-logo.png" alt="LOGO" class="bitlogo">
+    <i class="fa-solid fa-bars toggle-btn"></i>
+    <nav class="navbar">
+        <a href="home.html">HOME</a>
+        <a href="home-to-event-loader.html">EVENTS</a>
+        <a href="about.html">ABOUT</a>
+        <a href="resgister.html">REGISTER</a>
+    </nav>
+    <img src="images/leo.png" alt="leo-logo" class="bitlogo1">
+    <div class="bg-nav"></div>
+</header>
   <section id="team">
     <video id="video-background" autoplay muted >
         <!-- Add your video file source(s) here -->
         <source src="images/about-bg.mp4" type="video/mp4">
         <!-- Add additional source elements for different video formats -->
     </video>
+
       <h1>
           <strong>Advisor Committee</strong>
       </h1>
