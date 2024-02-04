@@ -4,17 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
     <script src="https://kit.fontawesome.com/dd9af7210e.js" crossorigin="anonymous"></script>
     <title>About</title>
 </head>
 <body>
     <style>
-        body{
+    body{
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
-    background-image: url(images/background-about.jpg);
 }
 *{
     box-sizing: border-box;
@@ -23,6 +21,7 @@ a{
     text-decoration: none;
 }
 #team{
+    margin-top: 6rem;
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -31,8 +30,8 @@ a{
     flex-direction: column;
 }
 h1 {
-    font-size: 1.3rem;
-    color: #2c2c2c;
+    font-size: 1.5rem;
+    color: #f1bc0d;
     font-weight: 500;
     display: flex;
     align-items: center;
@@ -79,6 +78,16 @@ h1 {
     margin: 5px 0;
 
 }
+#video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity:90%;
+}
 @media(max-width:612px){
     .box{
         flex-grow: 0.7;
@@ -86,6 +95,11 @@ h1 {
 }
     </style>
   <section id="team">
+    <video id="video-background" autoplay muted >
+        <!-- Add your video file source(s) here -->
+        <source src="images/about-bg.mp4" type="video/mp4">
+        <!-- Add additional source elements for different video formats -->
+    </video>
       <h1>
           <strong>Advisor Committee</strong>
       </h1>
