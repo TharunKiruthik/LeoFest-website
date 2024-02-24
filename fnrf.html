@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css"> 
+  
+</head>
+<body>
+  <header>
+    <img src="images/bit-logo.png" alt="LOGO" class="bitlogo">
+    <i class="fa-solid fa-bars toggle-btn"></i>
+    <nav class="navbar">
+      <a href="index.html">HOME</a>
+      <div class="dropdown">
+          <a href="#">EVENTS <i class="fas fa-caret-down"></i></a>
+          <div class="dropdown-content">
+              <a href="home-to-techevent-loader.html">Technical Events</a>
+              <a href="home-to-nontech-loader.html">Non-Technical Events</a>
+          </div>
+      </div>
+      <a href="#footer">CONTACT</a>
+      <a href="index.html">ACCOMADATION</a>
+      <a href="timer.html" class="animated-button1">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Register
+        </a>
+  </nav>
+  
+    <img src="images/leo.png" alt="leo-logo" class="bitlogo1">
+    <div class="bg-nav"></div>
+</header>
+</body>
+<style>
+body{
+  background-color: aqua;
+}
+</style>
+<script>
+  const bars = document.querySelector('.toggle-btn');
+const navbar = document.querySelector('header .navbar'); 
+bars.addEventListener('click',function(){
+    if(bars.classList.contains('fa-bars')){
+        bars.classList.remove('fa-bars');
+        bars.classList.add('fa-xmark');
+        navbar.classList.add('slide');
+    }
+    else {
+        bars.classList.remove('fa-xmark');
+        bars.classList.add('fa-bars');
+        navbar.classList.remove('slide');
+    }
+})
+
+</script>
+</html>

@@ -1,344 +1,409 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>REGISTER</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Main content container with background styling -->
-<main class="background">
-	<div class="container center">
-		<!-- Heading with a launch message -->
-		<h1 class="heading">WE'RE LAUNCHING SOON</h1>
+	<style>
 
-		<!-- Countdown timer section -->
-		<section class="countdown-timer">
 
-			<!-- Countdown for Days -->
-			<div class="countdown-info">
-				<div class="timer-box">
-					<div id="flip-sheet-day" class="sheet"></div>
-					<div class="circle-left"></div>
-					<p id="days" class="primary">00</p>
-					<div class="circle-right"></div>
-				</div>
+body {
+  display: flex;
+    flex-direction: column;
+    height: 100vh;
+ margin-top: 10%;
+  font-family: Arial, Helvetica, sans-serif;
+ background-color: black;
+ cursor: url("images/cursor.png"),auto;
+}
 
-				<p class="sub-heading">DAYS</p>
+h1.demo-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  color: #2A293E;
+  letter-spacing: 2px;
+}
+
+h1.demo-title a {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.pricing-table {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  background: transparent;
+}
+
+.pricing-table .ptable-item {
+  width: 33.33%;
+  padding: 0 15px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 992px) {
+  .pricing-table .ptable-item {
+    width: 33.33%;
+  }
+}
+
+@media (max-width: 763px) {
+  .pricing-table .ptable-item {
+    width: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .pricing-table .ptable-item {
+    width: 100%;
+  }
+}
+
+.pricing-table .ptable-single {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.pricing-table .ptable-header,
+.pricing-table .ptable-body,
+.pricing-table .ptable-footer {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.pricing-table .ptable-status ,
+.pricing-table .ptable-title,
+.pricing-table .ptable-price,
+.pricing-table .ptable-description,
+.pricing-table .ptable-action {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.pricing-table .ptable-single {
+  background: #f6f8fa;
+}
+
+.pricing-table .ptable-single:hover {
+  box-shadow: 0 0 10px #999999;
+}
+
+.pricing-table .ptable-header {
+  margin: 0 30px;
+  padding: 30px 0 45px 0;
+  width: auto;
+  background:#49371B;
+}
+
+.pricing-table .ptable-header::before,
+.pricing-table .ptable-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 100px solid #f6f8fa;
+}
+
+.pricing-table .ptable-header::before {
+  right: 50%;
+  border-right: 250px solid transparent;
+}
+
+.pricing-table .ptable-header::after {
+  left: 50%;
+  border-left: 250px solid transparent;
+}
+
+.pricing-table .ptable-item.featured-item .ptable-header {
+  background: grey
+  ;
+}
+
+.pricing-table .ptable-status {
+  margin-top: -30px;
+}
+
+.pricing-table .ptable-status span {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  padding: 5px 0;
+  text-align: center;
+  color: #FF6F61;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  background: #2A293E;
+}
+
+.pricing-table .ptable-status span::before,
+.pricing-table .ptable-status span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid #FF6F61;
+}
+
+.pricing-table .ptable-status span::before {
+  right: 50%;
+  border-right: 25px solid transparent;
+}
+
+.pricing-table .ptable-status span::after {
+  left: 50%;
+  border-left: 25px solid transparent;
+}
+
+.pricing-table .ptable-title h2 {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.pricing-table .ptable-price h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 45px;
+  font-weight: 700;
+  margin-left: 15px;
+}
+
+.pricing-table .ptable-price h2 small {
+  position: absolute;
+  font-size: 18px;
+  font-weight: 300;
+  margin-top: 16px;
+  margin-left: -15px;
+}
+
+.pricing-table .ptable-price h2 span {
+  margin-left: 3px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.pricing-table .ptable-body {
+  padding: 20px 0;
+}
+
+.pricing-table .ptable-description ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pricing-table .ptable-description ul li {
+  color: #2A293E;
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  padding: 7px;
+  border-bottom: 1px solid #dedede;
+}
+
+.pricing-table .ptable-description ul li:last-child {
+  border: none;
+}
+
+.pricing-table .ptable-footer {
+  padding-bottom: 30px;
+}
+
+.pricing-table .ptable-action a {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #FF6F61;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-decoration: none;
+  background: #2A293E;
+}
+
+.pricing-table .ptable-action a:hover {
+  color: #2A293E;
+  background: #FF6F61;
+}
+
+.pricing-table .ptable-item.featured-item .ptable-action a {
+  color: #2A293E;
+  background: #FF6F61;
+}
+
+.pricing-table .ptable-item.featured-item .ptable-action a:hover {
+  color: #FF6F61;
+  background: #2A293E;
+}
+	</style>
+  <header>
+    <img src="images/bann.png" alt="LOGO" class="bitlogo">
+    <i class="fa-solid fa-bars toggle-btn"></i>
+    <nav class="navbar">
+      <a href="index.html">HOME</a>
+      <div class="dropdown">
+          <a href="#">EVENTS <i class="fas fa-caret-down"></i></a>
+          <div class="dropdown-content">
+              <a href="home-to-techevent-loader.html">Technical Events</a>
+              <a href="home-to-nontech-loader.html">Non-Technical Events</a>
+          </div>
+        </div>
+      <a href="accomadation.html">ACCOMADATION</a>
+      <a href="timer.html" class="animated-button1">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Register
+        </a>
+  </nav>
+    <img src="images/leo.png" alt="leo-logo" class="bitlogo1">
+    <div class="bg-nav"></div>
+</header>
+	<h1 class="demo-title">
+		PRICES<br>
+	  </h1>
+	  <div class="pricing-table">
+		<div class="ptable-item">
+		  <div class="ptable-single">
+			<div class="ptable-header">
+			  <div class="ptable-title">
+				<h2>REGISTRATION FEES</h2>
+			  </div>
+			  <div class="ptable-price">
+				<h2><small>₹</small>350<span>/ person</span></h2>
+			  </div>
 			</div>
-
-			<!-- Countdown for Hours -->
-			<div class="countdown-info">
-				<div class="timer-box">
-					<div id="flip-sheet-hour" class="sheet"></div>
-					<div class="circle-left"></div>
-					<p id="hours" class="primary">00</p>
-					<div class="circle-right"></div>
-				</div>
-				<p class="sub-heading">HOURS</p>
+			<div class="ptable-body">
+			  <div class="ptable-description">
+				<ul>
+				  <li>2 TECHNICAL + <BR>
+            3 NON-TECHNICAL</li>
+				</ul>
+			  </div>
+			</div><BR>
+			<div class="ptable-footer">
+			  <div class="ptable-action">
+				<a href="">Buy Now</a>
+			  </div>
 			</div>
-
-			<!-- Countdown for Minutes -->
-			<div class="countdown-info">
-				<div class="timer-box">
-					<div id="flip-sheet-min" class="sheet"></div>
-					<div class="circle-left"></div>
-					<p id="minutes" class="primary">00</p>
-					<div class="circle-right"></div>
-				</div>
-				<p class="sub-heading">MINUTES</p>
+		  </div>
+		</div>
+		<div class="ptable-item">
+		  <div class="ptable-single">
+			<div class="ptable-header" style="background-color:#AE8625;">
+			  <div class="ptable-title">
+				<h2>REGISTRATION FEES</h2>
+			  </div>
+				<BR><BR>
+			  <div class="ptable-price">
+			  </div>
 			</div>
+			<div class="ptable-body">
+			  <div class="ptable-description">
+				<ul>
+				  <li>ROBOREVOLT-₹100/PERSON<BR>
 
-			<!-- Countdown for Seconds -->
-			<div class="countdown-info">
-				<div class="timer-box">
-					<div id="flip-sheet-sec" class="sheet"></div>
-					<div class="circle-left"></div>
-					<p id="seconds" class="primary">00</p>
-					<div class="circle-right"></div>
-				</div>
-				<p class="sub-heading">SECONDS</p>
+				</ul>
+			  </div>
+			</div><BR>
+			  <BR>
+			  <BR>
+			<div class="ptable-footer">
+			  <div class="ptable-action">
+				<a href="">Buy Now</a>
+			  </div>
 			</div>
+		  </div>
+		</div>
 
-		</section>
-	</div>
+	  
+		<div class="ptable-item">
+		  <div class="ptable-single">
+			<div class="ptable-header" style="background-color:#AE8625;">
+			  <div class="ptable-title">
+				<h2>REGISTRATION FEES</h2>
+			  </div>
+				<BR><BR>
+			  <div class="ptable-price">
+			  </div>
+			</div>
+			<div class="ptable-body">
+			  <div class="ptable-description">
+				<ul>
+				  <li>ACTION & CUT-₹100/PERSON<BR>
 
-	<!-- Social Media Icons at the bottom -->
-	<div class="container bottom">
-		<img src="https://i.postimg.cc/9fpn2KBS/icon-facebook.png" alt="facebook" class="social-icon">
-		<img src="https://i.postimg.cc/Nf3Vk1MN/icon-pinterest.png" alt="pinterest" class="social-icon">
-		<img src="https://i.postimg.cc/Gmvf7HTb/icon-instagram.png" alt="instagram" class="social-icon">
-	</div>
-</main>
+				</ul>
+			  </div>
+			</div>
+			  <BR><BR><BR><BR>
+			<div class="ptable-footer">
+			  <div class="ptable-action">
+				<a href="">Buy Now</a>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+    <div class="ptable-item featured-item">
+		  <div class="ptable-single">
+			<div class="ptable-header">
+			  <div class="ptable-status">
+			  </div>
+			  <div class="ptable-title">
+				<h2> <br> REGISTRATION FEES Event</h2><br>
+			  </div>
+			</div>
+			  <BR><BR><BR>
+			<div class="ptable-body">
+			  <div class="ptable-description">
+				<ul>
+          <li>MEME CREATION- ₹50/PERSON</li><br>
+				</ul>
+			  </div>
+			</div>
+			<div class="ptable-footer">
+			  <div class="ptable-action">
+				<a href="">Buy Now</a>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+    
 </body>
-<style>
-    /* Importing a Google Font */
-@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
 
-/* Global CSS Reset */
-* {
-	margin: 0;
-	box-sizing: border-box;
-}
-/* Custom CSS Variables */
-:root {
-	/* Colors */
-	--Grayish_blue: hsl(237, 18%, 59%);
-	--Soft_red: hsl(345, 95%, 68%);
-	--White: hsl(0, 0%, 100%);
-	--Dark_desaturated_blue: hsl(236, 21%, 26%);
-	--Very_dark_blue: hsl(235, 16%, 14%);
-	--Very_dark_blac_blue: hsl(234, 17%, 12%);
-
-	/* font size */
-	--h-text: 1.1rem;
-	--p-text: 1.8rem;
-	--s-text: 0.5rem;
-
-	/* custom-shape */
-	--circle-width: 0.25em;
-	--circle-height: 0.45em;
-}
-
-/* Font Styles */
-.heading-a {
-	font-size: var(--h-text);
-	color: var(--White);
-	letter-spacing: 0.5ch;
-	text-align: center;
-	margin-bottom: 3rem;
-}
-
-.primary {
-	font-size: var(--p-text);
-	color: var(--Soft_red);
-	text-align: center;
-}
-
-.sub-heading {
-	font-size: var(--s-text);
-	color: var(--Grayish_blue);
-	text-align: center;
-	letter-spacing: 0.5ch;
-	margin-top: 1em;
-}
-
-/* General CSS */
-
-
-.container {
-	margin: 1em;
-}
-
-.center {
-	align-self: flex-end;
-}
-
-.countdown-timer {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	gap: 1em;
-}
-
-.timer-box {
-	width: 4rem;
-	padding: 0.5rem;
-	text-align: center;
-	background-color: var(--Dark_desaturated_blue);
-	position: relative;
-	border-radius: 0.25em;
-}
-
-.sheet {
-	position: absolute;
-	width: 100%;
-	height: 50%;
-	left: 0;
-	top: 0;
-	right: 0;
-	background-color: var(--Very_dark_blue);
-	opacity: 0.35;
-}
-
-.flip {
-	transition: transform 1s;
-	transform: translate(0%, 100%) scaleY(-1);
-}
-
-.circle-left {
-	width: var(--circle-width);
-	height: var(--circle-height);
-	position: absolute;
-	background-color: var(--Very_dark_blac_blue);
-	border-top-right-radius: 100%;
-	border-bottom-right-radius: 100%;
-	top: 45%;
-	left: 0;
-}
-
-.circle-right {
-	width: var(--circle-width);
-	height: var(--circle-height);
-	position: absolute;
-	background-color: var(--Very_dark_blac_blue);
-	border-top-left-radius: 100%;
-	border-bottom-left-radius: 100%;
-	top: 45%;
-	right: 0;
-}
-
-/* Media Queries for Responsive Design */
-@media (min-width: 430px) {
-	:root {
-		--h-text: 1.25rem;
-		--p-text: 2rem;
-		--s-text: 0.5rem;
-
-		--circle-width: 0.35em;
-		--circle-height: 0.65em;
-	}
-
-	.timer-box {
-		width: 5rem;
-		padding: 0.75rem;
-	}
-}
-
-@media (min-width: 550px) {
-	:root {
-		--p-text: 3rem;
-		--s-text: 0.75rem;
-
-		--circle-width: 0.4em;
-		--circle-height: 0.7em;
-	}
-
-	.timer-box {
-		width: 6rem;
-		padding: 0.75rem;
-	}
-}
-
-@media (min-width: 800px) {
-	:root {
-		--p-text: 4rem;
-	}
-
-	.timer-box {
-		width: 8rem;
-		padding: 1rem;
-	}
-}
-
-</style>
 <script>
-    // Select HTML elements by their IDs and assign them to variables
-const day = document.getElementById("days");
-const hour = document.getElementById("hours");
-const min = document.getElementById("minutes");
-const sec = document.getElementById("seconds");
-
-// Select elements for flipping sheets and assign them to variables
-const dayFlip = document.getElementById("flip-sheet-day");
-const hourFlip = document.getElementById("flip-sheet-hour");
-const minFlip = document.getElementById("flip-sheet-min");
-const secFlip = document.getElementById("flip-sheet-sec");
-
-// Initialize countdown values
-let days = Math.floor(Math.random() * 31);
-let hours = 23;
-let minutes = 59;
-let seconds = 59;
-
-// Function to display the day value with leading zero if less than 10
-const dayValue = () => {
-	if (days < 10) {
-		day.innerText = `0${days}`;
-	} else {
-		day.innerText = days;
-	}
-};
-
-// Function to display the hour value with leading zero if less than 10
-const hourValue = () => {
-	if (hours < 10) {
-		hour.innerText = `0${hours}`;
-	} else {
-		hour.innerText = hours;
-	}
-};
-
-// Function to display the minute value with leading zero if less than 10
-const minValue = () => {
-	if (minutes < 10) {
-		min.innerText = `0${minutes}`;
-	} else {
-		min.innerText = minutes;
-	}
-};
-
-// Function to display the second value with leading zero if less than 10
-const secValue = () => {
-	if (seconds < 10) {
-		sec.innerText = `0${seconds}`;
-	} else {
-		sec.innerText = seconds;
-	}
-};
-
-// Function to update the countdown timer and perform transitions
-const timer = () => {
-	dayValue();
-	hourValue();
-	minValue();
-	secValue();
-
-	seconds--;
-
-	if (seconds < 0 && minutes > 0) {
-		seconds = 59;
-		minutes--;
-		flip_anime(minFlip);
-	}
-
-	if (minutes <= 0 && hours > 0) {
-		minutes = 59;
-		hours--;
-		flip_anime(hourFlip);
-	}
-
-	if (hours <= 0 && days > 0) {
-		hours = 23;
-		days--;
-		flip_anime(dayFlip);
-	}
-
-	if (seconds < 0 && hours == 0 && minutes == 0 && days == 0) {
-		clearInterval(stopTimer);
-		clearInterval(stopAnime);
-	}
-};
-
-// Set an interval to run the timer function every 1000ms (1 second)
-const stopTimer = setInterval(timer, 1000);
-
-// Function to toggle the "flip" class for seconds flip animation
-const flip_anime_sec = () => {
-	secFlip.classList.toggle("flip");
-};
-
-// Function to toggle the "flip" class for the provided element
-const flip_anime = (obj) => {
-	obj.classList.add("flip");
-
-	setTimeout(() => {
-		obj.classList.remove("flip");
-	}, 1000);
-};
-
-// Set an interval to run the flip_anime_sec function every 1000ms for seconds flip animation
-const stopAnime = setInterval(flip_anime_sec, 1000);
-
+  const bars = document.querySelector('.toggle-btn');
+const navbar = document.querySelector('header .navbar'); 
+bars.addEventListener('click',function(){
+    if(bars.classList.contains('fa-bars')){
+        bars.classList.remove('fa-bars');
+        bars.classList.add('fa-xmark');
+        navbar.classList.add('slide');
+    }
+    else {
+        bars.classList.remove('fa-xmark');
+        bars.classList.add('fa-bars');
+        navbar.classList.remove('slide');
+    }
+})
+  
 </script>
 </html>

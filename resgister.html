@@ -1,103 +1,597 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-
-    <!--boots trap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <style>
-      body{
-        background-image: url(images/offer.jpg);
-        background-size: cover;
-        background-position: center center;
-        background-attachment: fixed;
-        color: white;
-    }
-    
-    .title{
-        margin: 0 auto;
-        width: 100%;
-        max-width: 40rem;
-        font-size: 4rem;
-        text-align: center;
-    
-    }
-    .card{
-        width: 90%;
-        max-width: 400px;
-        padding: 5rem 2.5rem;
-        border-radius: 1rem;
-        border: 1px solid transparent;
-        backdrop-filter: blur(1rem);
-        box-shadow: 1.3rem 1.3rem 1.3rem rgba(0, 0, 0, 0.5);
-        border-top-color: rgba(255, 255, 255, 0.5);
-        border-left-color: rgba(255, 255, 255, 0.5);
-        border-bottom-color: rgba(255, 255, 255, 0.1);
-        border-right-color: rgba(255, 255, 255, 0.1);
-    }
-    .cb1{
-        background-color:rgba(255, 255, 255, 0.1);
-    }
-    .cb2{
-        color: black;
-        background: linear-gradient(to right bottom,rgba(255,255,255,0.5),rgba(255,255,255,0.3));
-    
-    }
-    .card-number{
-        color:rgba(255, 255, 255, 0.5) ;
-        font-size: 8rem;
-        z-index: -1;
-        position: absolute;
-        top: -1rem;
-        right: 2.5rem;
-    }
-    .btn{
-        border-radius: 2rem;
-    }
-    .btn:hover{
-        box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.3);
-    }
-    </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>REGISTER</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div class="container">
-        <h1 class="tilte text-center py-4"> Prices</h1>
-        <div class="row">
-            <div class="col-md-6 d-flex justify-content-center">
-                
-                <div class="card m-2 cb1 text-center" >
-                    
-                    <div class="card-body">
-
-                      <h2 class="card-title mb-4"> single price</h2>
-                      <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, in cum. Saepe, deserunt ullam sit ratione mollitia veritatis nisi atque soluta placeat quas quia dolor, optio magnam ipsum ab excepturi.Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="https://forms.gle/F6SeLrzsEyinj6er7" class="btn btn-outline-light">REGISTER</a>
-                    </div>
-                  </div>
-
-
-            </div>
-            <div class="col-md-6 d-flex justify-content-center">
-
-                <div class="card m-2 cb2 text-center" >
-                    
-                    <div class="card-body">
-
-                      <h2 class="card-title mb-4"> combo price</h2>
-                      <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, in cum. Saepe, deserunt ullam sit ratione mollitia veritatis nisi atque soluta placeat quas quia dolor, optio magnam ipsum ab excepturi.Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="https://forms.gle/F6SeLrzsEyinj6er7" class="btn btn-outline-light">REGISTER</a>
-                    </div>
-                  </div>
-
-            </div>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script>
+    const bars = document.querySelector('.toggle-btn');
+const navbar = document.querySelector('header .navbar'); 
+bars.addEventListener('click',function(){
+    if(bars.classList.contains('fa-bars')){
+        bars.classList.remove('fa-bars');
+        bars.classList.add('fa-xmark');
+        navbar.classList.add('slide');
+    }
+    else {
+        bars.classList.remove('fa-xmark');
+        bars.classList.add('fa-bars');
+        navbar.classList.remove('slide');
+    }
+})
+  </script>
+	<style>
+        
+header{ 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  z-index: 1000;
+  height:fit-content;
+  background-color: rgba(26, 26, 36, 0.765);
 
 
+}
+header .bitlogo{
+  position: relative;
+  width: 5rem;
+  height: 5rem;
+}
+header .bitlogo1{
+  position: relative;
+  width: 5rem;
+  height:5rem;
+}.navbar{
+  left: -10%;
+}
+header .navbar a{
+  text-decoration: none;
+  display:inline-block;
+  align-items: center;
+  justify-content:center;
+  font-size: 1rem;
+  margin-left: 3rem;
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+header .navbar a:hover{
+  color:  red;
+}
+header .bg-nav{
+  display: none;
+}
+
+@media(max-width:992px){
+  html{
+      font-size: 60%;
+  }
+  section{
+      padding: 0 5%;
+  }
+  header{
+      padding:2rem 5%;
+  }
+  .home .content h3{
+      font-size: 3.3rem;
+      line-height: 2.5rem;
+  }
+}
+
+@media(max-width:768px){
+  html{
+      font-size: 59%;
+  }
+  .toggle-btn{
+      display: block;
+  }
+  header .navbar{
+      position: absolute;
+      left: 0;
+      top: -300px;
+      width: 100%;
+      background:rgba(26, 26, 36, 0.884);
+      padding: 1rem 5%;
+      
+      overflow: hidden;
+      transform: .8s;
+      z-index: -2;
+  }
+  header .navbar.slide{
+      top: 100%;
+  }
+  header .navbar a{
+      display: block;
+      margin: 2rem 0;
+      font-size: 1.8rem;
+  }
+  header .bitlogo1{
+      position: absolute;
+      right: 12%;   
+  }
+  header .bg-nav{
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;height:fit-content;
+      background-color: rgba(26, 26, 36, 0.671);
+      z-index: -1;
+      transition: 1s;
+  }
+  section{
+      height:fit-content;
+  }
+}
+
+@media(max-width:660px){
+  html{
+      font-size: 1rem;
+  }
+  header .navbar.slide{
+      top: 78px;
+  }
+}
+@media(max-width:330px){
+  html{
+      font-size: 1.5rem;
+  }
+  head .bitlogo1{
+      right: 15%;
+  }
+}
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+    flex-direction: column;
+    height: 100vh;
+ margin-top: 10%;
+  font-family: Arial, Helvetica, sans-serif;
+ background-color: black;
+ cursor: url("images/cursor.png"),auto;
+}
+
+h1.demo-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  color: #2A293E;
+  letter-spacing: 2px;
+}
+
+h1.demo-title a {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.pricing-table {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  background: transparent;
+}
+
+.pricing-table .ptable-item {
+  width: 33.33%;
+  padding: 0 15px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 992px) {
+  .pricing-table .ptable-item {
+    width: 33.33%;
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-table .ptable-item {
+    width: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .pricing-table .ptable-item {
+    width: 100%;
+  }
+}
+
+.pricing-table .ptable-single {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.pricing-table .ptable-header,
+.pricing-table .ptable-body,
+.pricing-table .ptable-footer {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.pricing-table .ptable-status ,
+.pricing-table .ptable-title,
+.pricing-table .ptable-price,
+.pricing-table .ptable-description,
+.pricing-table .ptable-action {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.pricing-table .ptable-single {
+  background: #f6f8fa;
+}
+
+.pricing-table .ptable-single:hover {
+  box-shadow: 0 0 10px #999999;
+}
+
+.pricing-table .ptable-header {
+  margin: 0 30px;
+  padding: 30px 0 45px 0;
+  width: auto;
+  background:#49371B;
+}
+
+.pricing-table .ptable-header::before,
+.pricing-table .ptable-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 100px solid #f6f8fa;
+}
+
+.pricing-table .ptable-header::before {
+  right: 50%;
+  border-right: 250px solid transparent;
+}
+
+.pricing-table .ptable-header::after {
+  left: 50%;
+  border-left: 250px solid transparent;
+}
+
+.pricing-table .ptable-item.featured-item .ptable-header {
+  background: grey
+  ;
+}
+
+.pricing-table .ptable-status {
+  margin-top: -30px;
+}
+
+.pricing-table .ptable-status span {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  padding: 5px 0;
+  text-align: center;
+  color: #FF6F61;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  background: #2A293E;
+}
+
+.pricing-table .ptable-status span::before,
+.pricing-table .ptable-status span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid #FF6F61;
+}
+
+.pricing-table .ptable-status span::before {
+  right: 50%;
+  border-right: 25px solid transparent;
+}
+
+.pricing-table .ptable-status span::after {
+  left: 50%;
+  border-left: 25px solid transparent;
+}
+
+.pricing-table .ptable-title h2 {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.pricing-table .ptable-price h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 45px;
+  font-weight: 700;
+  margin-left: 15px;
+}
+
+.pricing-table .ptable-price h2 small {
+  position: absolute;
+  font-size: 18px;
+  font-weight: 300;
+  margin-top: 16px;
+  margin-left: -15px;
+}
+
+.pricing-table .ptable-price h2 span {
+  margin-left: 3px;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.pricing-table .ptable-body {
+  padding: 20px 0;
+}
+
+.pricing-table .ptable-description ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pricing-table .ptable-description ul li {
+  color: #2A293E;
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  padding: 7px;
+  border-bottom: 1px solid #dedede;
+}
+
+.pricing-table .ptable-description ul li:last-child {
+  border: none;
+}
+
+.pricing-table .ptable-footer {
+  padding-bottom: 30px;
+}
+
+.pricing-table .ptable-action a {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #FF6F61;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-decoration: none;
+  background: #2A293E;
+}
+
+.pricing-table .ptable-action a:hover {
+  color: #2A293E;
+  background: #FF6F61;
+}
+
+.pricing-table .ptable-item.featured-item .ptable-action a {
+  color: #2A293E;
+  background: #FF6F61;
+}
+
+.pricing-table .ptable-item.featured-item .ptable-action a:hover {
+  color: #FF6F61;
+  background: #2A293E;
+}
+	</style>
+<header>
+        <img src="images/bann.png" alt="LOGO" class="bitlogo">
+        <i class="fa-solid fa-bars toggle-btn"></i>
+        <nav class="navbar">
+          <a href="index.html">HOME</a>
+          <div class="dropdown">
+              <a href="#">EVENTS <i class="fas fa-caret-down"></i></a>
+              <div class="dropdown-content">
+                  <a href="home-to-techevent-loader.html">Technical Events</a>
+                  <a href="home-to-nontech-loader.html">Non-Technical Events</a>
+              </div>
+          </div>
+          <a href="#footer">CONTACT</a>
+          <a href="timer.html" class="animated-button1">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Register
+            </a>
+      </nav>
+      
+        <img src="images/leo.png" alt="leo-logo" class="bitlogo1">
+        <div class="bg-nav"></div>
+    </header>
+
+
+	<h1 class="demo-title">
+		PRICES<br>
+	  </h1>
+	  <div class="pricing-table">
+		<div class="ptable-item">
+		  <div class="ptable-single">
+			<div class="ptable-header">
+			  <div class="ptable-title">
+				<h2>Bronze Card</h2>
+			  </div>
+			  <div class="ptable-price">
+				<h2><small>₹</small>250<span>/ person</span></h2>
+			  </div>
+			</div>
+			<div class="ptable-body">
+			  <div class="ptable-description">
+				<ul>
+				  <li>2 TECHNICAL + <BR>
+            2 NON-TECHNICAL</li>
+				  <li>SINGLE LUNCH</li>
+				</ul>
+			  </div>
+			</div>
+			<div class="ptable-footer">
+			  <div class="ptable-action">
+				<a href="">Buy Now</a>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  
+		<div class="ptable-item featured-item">
+		  <div class="ptable-single">
+			<div class="ptable-header">
+			  <div class="ptable-status">
+			  </div>
+			  <div class="ptable-title">
+				<h2> <br> Silver Card</h2>
+			  </div>
+			  <div class="ptable-price">
+				<h2><small>₹</small>350<span>/ person</span></h2>
+			  </div>
+			</div>
+			<div class="ptable-body">
+			  <div class="ptable-description">
+				<ul>
+				  <li>3 TECHNICAL + <BR>
+            3 NON-TECHNICAL</li>
+				  <li>SINGLE LUNCH</li>
+				</ul>
+			  </div>
+			</div>
+			<div class="ptable-footer">
+			  <div class="ptable-action">
+				<a href="">Buy Now</a>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  
+		<div class="ptable-item">
+		  <div class="ptable-single">
+			<div class="ptable-header" style="background-color:#AE8625;">
+			  <div class="ptable-title">
+				<h2>Gold Card</h2>
+			  </div>
+			  <div class="ptable-price">
+				<h2><small>₹</small>450<span>/ person</span></h2>
+			  </div>
+			</div>
+			<div class="ptable-body">
+			  <div class="ptable-description">
+				<ul>
+				  <li>4 TECHNICAL + <BR>
+            4 NON-TECHNICAL</li>
+				  <li>DOUBLE LUNCH</li>
+
+				</ul>
+			  </div>
+			</div>
+			<div class="ptable-footer">
+			  <div class="ptable-action">
+				<a href="">Buy Now</a>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+    <div class="ptable-item featured-item">
+		  <div class="ptable-single">
+			<div class="ptable-header">
+			  <div class="ptable-status">
+			  </div>
+			  <div class="ptable-title">
+				<h2> <br> Single Price Event</h2><br>
+			  </div>
+			</div>
+			<div class="ptable-body">
+			  <div class="ptable-description">
+				<ul>
+				  <li>WORKSHOP - ₹100</li>
+				  <li>ROBOREVOLT - ₹100</li>
+          <li>ACTION & CUT - ₹100</li>
+          <li>MEME CREATION - ₹50</li><br>
+				</ul>
+			  </div>
+			</div>
+			<div class="ptable-footer">
+			  <div class="ptable-action">
+				<a href="">Buy Now</a>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+    <div class="ptable-item featured-item">
+		  <div class="ptable-single">
+			<div class="ptable-header">
+			  <div class="ptable-status">
+			  </div>
+			  <div class="ptable-title">
+				<h2> <br>Combo Offer</h2>
+        <h2 style="font-size: 15px;">(Except Meme Creation)</h2>
+			  </div>
+			</div>
+			<div class="ptable-body">
+			  <div class="ptable-description ">
+				<ul >
+				  <li style="font-size: 20px;">Any Card+Single Event = ₹50 OFF</li>
+				  <li style="font-size: 20px;">Any Card+Double Event = ₹100 OFF</li>
+          <li style="font-size: 20px;">Any Card+Triple Event = ₹150 OFF</li>
+				</ul>
+			  </div>
+			</div>
+			<div class="ptable-footer">
+			  <div class="ptable-action">
+				<a href="">Buy Now</a>
+			  </div>
+			</div>
+			  
+		  </div>
+		</div>
+		   <div class="ptable-item featured-item">
+		  <div class="ptable-single">
+			<div class="ptable-header">
+			  <div class="ptable-status">
+			  </div>
+			  <div class="ptable-title">
+				<h2> <br></h2><br>
+			  </div>
+			</div>
+			<div class="ptable-body">
+			  <div class="ptable-description">
+				<ul>
+				  <li></li>
+				  <li></li>
+          <li></li>
+          <li></li><br>
+				</ul>
+			  </div>
+			</div>
+			<div class="ptable-footer">
+			  <div class="ptable-action">
+				<a href="">Buy Now</a>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
 </body>
 </html>

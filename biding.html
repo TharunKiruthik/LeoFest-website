@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bidding Bash</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-1">
+        <h1>BIDDING BASH</h1><br>
+        <h2>Description</h2><br>
+        <p>Join us for the ultimate cricket frenzy at our IPL Auction event! Experience the
+            excitement of bidding for your favorite players, strategizing with your team, and competing to
+            build the ultimate squad. Don't miss this chance to showcase your cricket knowledge and
+            negotiation skills in a thrilling atmosphere filled with fellow college enthusiasts!</p> 
+             <br> <h2>Rules and Regulations</h2><br>
+              <p>1. Participants must register in teams consisting of a minimum of two members and
+                maximum of three members.  <br>
+                2. Bidding for each player will be open for 10 seconds only, with bidding closing
+                automatically once the timer expires or if no further bids are made. <br>
+                3. Each team will be allocated a virtual budget for player bidding. <br>
+                4. Teams cannot exceed their allocated budget during bidding. <br>
+                5. The decision of the event organizers regarding player auctions and team compositions will be
+                final. <br>
+                6. IPL team name will be chosen at random from a bowl during the event.</p><br>
+                <h2>Student Co-ordinators</h2><br>
+                <p>1.KISHORE KARTHI - III YEAR - 9345513334 <br>
+                   2.BHARATH T     - II YEAR   -   8940284478 <br>
+                  3.ARAVINDKUMAR R - II YEAR - 6381779113</p>
+              
+            </div>
+      
+    </div>
+  </div>
+</body>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  .container{
+    color: white;
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom left,black 40%, rgb(71, 71, 71) 100%);
+    overflow: hidden;
+  }
+  .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 0;
+  }
+  .col-1{
+    flex-basis: 100%;
+    position: relative;
+    margin-left: 50px;
+  }
+  .col-1 h1{
+    background: -webkit-linear-gradient(red, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+    text-align: left;
+  }
+  .col-1 h2{
+    background: -webkit-linear-gradient( blue,skyblue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .col-1 p{
+    color: white;
+    font-weight: 100;
+    text-align: left;
+  }
+  .col-1::after{
+    content: '';
+    width: 10px;
+    height: 57px;
+    background: linear-gradient(to bottom left,white 40%,gray 50%);
+    position: absolute;
+    left: -40px;
+    top: 8px;
+  }
+  .col-2{
+    position: relative;
+    font-size: 20px;
+    flex-basis:60%;
+    display: flex;
+    align-items: center;
+  }
+  .col-2 .header{
+    color: #b7b7b7;
+  }
+  .hearder{
+    width: 30%;
+    z-index:10 ;
+  }
+  .color-box{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: linear-gradient(#ff54a2,#ff575a);
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    transform: translateX(5px);
+  }
+
+  @media only screen and(max-width:700px) {
+    .row{
+      flex-direction: column;
+      margin: 50px;
+    }
+    .col-2{
+      flex-basis:100%;
+      margin-bottom: 50px;
+    }
+     .header{
+      width:77% ;
+    }
+    .color-box{
+      transform: translateX(75px);
+    }
+    .col-1{
+      flex-basis: 100%;
+    }
+    .col-1 h1{
+      font-size: 1px;
+    }
+    .col-1 p{
+      font-size: 10px;
+    }
+
+  }
+</style>
+</html>

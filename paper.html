@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paper Presentation</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-1">
+        <h1>PAPER PRESENTATION</h1><br>
+        <h2>Description</h2><br>
+        <p>Embark on a scholarly journey with our Paper Presentation Event. Engage with thought-provoking research and insightful discussions. It's an intellectual gathering where minds converge to explore, learn, and appreciate the richness of diverse ideas. Join us for a day of discovery and meaningful conversations.</p> 
+             <br> <h2>Rules and Regulations</h2><br>
+              <p>1.A maximum of 4 participants is allowed.<br>
+                2.No Participants can be part of more than one team. <br>
+                3.Only registered participants are allowed to participate in the event.                <br>
+                4.Each Team will get 5 minutes to present their paper and 2 minutes will be for queries. <br>
+                5.Presenters can bring their laptops to present their presentations on the day of the event.<br>
+                6.Plagiarism is not entertained. <br>
+                7.Participants must be present in their hall at their allocated time.
+              </p> <br>
+                <h2>Student Co-ordinators</h2><br>
+                <p>1. SHEFFALLI R - III YEAR  - 9600766377 <br><br>
+                    2. MOUNEES KUMAR R - II YEAR - 6381164194 <br><br>
+                    3. POOJA N - II YEAR - 6382154944</p>
+            </div>
+      
+    </div>
+  </div>
+</body>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  .container{
+    color: white;
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom left,black 40%, rgb(71, 71, 71) 100%);
+    overflow: hidden;
+  }
+  .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 0;
+  }
+  .col-1{
+    flex-basis: 100%;
+    position: relative;
+    margin-left: 50px;
+  }
+  .col-1 h1{
+    background: -webkit-linear-gradient(red, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 38px;
+    text-align: left;
+  }
+  .col-1 h2{
+    background: -webkit-linear-gradient( blue,skyblue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .col-1 p{
+    color: white;
+    font-weight: 100;
+    text-align: left;
+  }
+  .col-1::after{
+    content: '';
+    width: 10px;
+    height: 57px;
+    background: linear-gradient(to bottom left,white 40%,gray 50%);
+    position: absolute;
+    left: -40px;
+    top: 8px;
+  }
+  .col-2{
+    position: relative;
+    font-size: 20px;
+    flex-basis:60%;
+    display: flex;
+    align-items: center;
+  }
+  .col-2 .header{
+    color: #b7b7b7;
+  }
+  .hearder{
+    width: 30%;
+    z-index:10 ;
+  }
+  .color-box{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: linear-gradient(#ff54a2,#ff575a);
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    transform: translateX(5px);
+  }
+
+  @media only screen and(max-width:700px) {
+    .row{
+      flex-direction: column;
+      margin: 50px;
+    }
+    .col-2{
+      flex-basis:100%;
+      margin-bottom: 50px;
+    }
+     .header{
+      width:77% ;
+    }
+    .color-box{
+      transform: translateX(75px);
+    }
+    .col-1{
+      flex-basis: 100%;
+    }
+    .col-1 h1{
+      font-size: 1px;
+    }
+    .col-1 p{
+      font-size: 10px;
+    }
+
+  }
+</style>
+</html>

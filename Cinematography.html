@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> ACTION & CUT</title>
+  <link rel="stylesheet" href="button.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-1">
+        <h1>ACTION & CUT </h1><br>
+        <h2>Description</h2><br>
+        <p>Be ready to unleash your imagination and share your unique stories as motion picture
+          in Our Big Stage. “ACTION & CUT” is the perfect platform for emerging filmmakers ,
+          storytellers and Cinematographers around us where the budding
+          filmmakers showcase their talent and creativity through their short film.</p> 
+             <br> <h2>Rules and Regulations</h2><br>
+              <p>1. Short films, Documentaries, The Essence of Nature and Music Video are purely
+                encouraged with Minimum Duration of 3 Minutes to 30 Minutes. <br>
+                2.Each presentation team will get 5 min for presentation + 03 min for Q & A. <br>
+                3.The presentation should be only in MS PowerPoint (ppt /pptx). <br>
+                4.Maximum number of 12 slides only allowed and must be in Times New Roman font completely. <br>
+                5. Plagiarism is not entertained.</p><br>
+                <h2>Student Co-ordinators</h2><br>
+                <p>1.JOTHILINGAM D - III YEAR  - 6374648731<br>
+                  2.HARITHVARAKESAN B S - II YEAR - 9514528361<br>
+                  3.SABARISH K S -II YEAR- 6374052177</p>
+              
+            </div>
+      
+    </div>
+  </div>
+</body>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  .container{
+    color: white;
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom left,black 40%, rgb(71, 71, 71) 100%);
+    overflow: hidden;
+  }
+  .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 0;
+  }
+  .col-1{
+    flex-basis: 100%;
+    position: relative;
+    margin-left: 50px;
+  }
+  .col-1 h1{
+    background: -webkit-linear-gradient(red, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+    text-align: left;
+  }
+  .col-1 h2{
+    background: -webkit-linear-gradient( blue,skyblue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .col-1 p{
+    color: white;
+    font-weight: 100;
+    text-align: left;
+  }
+  .col-1::after{
+    content: '';
+    width: 10px;
+    height: 57px;
+    background: linear-gradient(to bottom left,white 40%,gray 50%);
+    position: absolute;
+    left: -40px;
+    top: 8px;
+  }
+  .col-2{
+    position: relative;
+    font-size: 20px;
+    flex-basis:60%;
+    display: flex;
+    align-items: center;
+  }
+  .col-2 .header{
+    color: #b7b7b7;
+  }
+  .hearder{
+    width: 30%;
+    z-index:10 ;
+  }
+  .color-box{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: linear-gradient(#ff54a2,#ff575a);
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    transform: translateX(5px);
+  }
+
+  @media only screen and(max-width:700px) {
+    .row{
+      flex-direction: column;
+      margin: 50px;
+    }
+    .col-2{
+      flex-basis:100%;
+      margin-bottom: 50px;
+    }
+     .header{
+      width:77% ;
+    }
+    .color-box{
+      transform: translateX(75px);
+    }
+    .col-1{
+      flex-basis: 100%;
+    }
+    .col-1 h1{
+      font-size: 1px;
+    }
+    .col-1 p{
+      font-size: 10px;
+    }
+
+  }
+</style>
+</html>

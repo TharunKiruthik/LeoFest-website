@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ciniphilia</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-1">
+        <h1>CINIPHILIA</h1><br>
+        <h2>Description</h2><br>
+        <p>Cinephillia is an event designed to test participants' knowledge and passion for movies.
+          Through three rounds of challenges, teams will compete by identifying movie names, songs,
+          and dialogues.</p>  <br>
+          <h2> ROUNDS</h2>
+          <p> Round 1: Name that Movie
+            - Each team will be presented with a series of movie scenes, posters, or still images.
+            - Teams must identify the name of the movie within a specified time limit.
+            - Points will be awarded for each correct answer.<br><br>
+            Round 2: Guess the Song
+            - Teams will listen to short audio clips from various movie soundtracks.
+            - Teams must identify the name of the song and the movie it belongs to within a specified time
+            limit.
+            - Points will be awarded for each correct answer.<br><br>
+            Round 3: Dialogue Identification
+            - Teams will be played short audio clips containing famous dialogues from movies.
+            - Teams must identify the movie and the character who spoke the dialogue within a specified
+            time limit.
+            - Points will be awarded for each correct answer.
+            Scoring:
+            - Points will be awarded based on the accuracy and speed of the teams' responses in each round.
+            - The team with the highest overall score at the end of <br><br>
+           Finally declared the winner.</p>
+             <br> <h2>Rules and Regulations</h2><br>
+              <p>1. Each team can have four participants only. <br>
+                2.Each presentation team will get 5 min for presentation + 03 min for Q & A. <br>
+                3.The presentation should be only in MS PowerPoint (ppt /pptx). <br>
+                4.Maximum number of 12 slides only allowed and must be in Times New Roman font completely. <br>
+                5. Plagiarism is not entertained.</p><br>
+                <h2>Student Co-ordinators</h2><br>
+                <p>1. HARINI H – III YEAR  - 7806881282 <br>
+                  2. BALAJI H – II YEAR - 9677674828 <br>
+                  3. SANTHOSH KUMAR S – II YEAR - 811029093</p>
+              
+            </div>
+      
+    </div>
+  </div>
+</body>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  .container{
+    color: white;
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom left,black 40%, rgb(71, 71, 71) 100%);
+    overflow: hidden;
+  }
+  .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 0;
+  }
+  .col-1{
+    flex-basis: 100%;
+    position: relative;
+    margin-left: 50px;
+  }
+  .col-1 h1{
+    background: -webkit-linear-gradient(red, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+    text-align: left;
+  }
+  .col-1 h2{
+    background: -webkit-linear-gradient( blue,skyblue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .col-1 p{
+    color: white;
+    font-weight: 100;
+    text-align: left;
+  }
+  .col-1::after{
+    content: '';
+    width: 10px;
+    height: 57px;
+    background: linear-gradient(to bottom left,white 40%,gray 50%);
+    position: absolute;
+    left: -40px;
+    top: 8px;
+  }
+  .col-2{
+    position: relative;
+    font-size: 20px;
+    flex-basis:60%;
+    display: flex;
+    align-items: center;
+  }
+  .col-2 .header{
+    color: #b7b7b7;
+  }
+  .hearder{
+    width: 30%;
+    z-index:10 ;
+  }
+  .color-box{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: linear-gradient(#ff54a2,#ff575a);
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    transform: translateX(5px);
+  }
+
+  @media only screen and(max-width:700px) {
+    .row{
+      flex-direction: column;
+      margin: 50px;
+    }
+    .col-2{
+      flex-basis:100%;
+      margin-bottom: 50px;
+    }
+     .header{
+      width:77% ;
+    }
+    .color-box{
+      transform: translateX(75px);
+    }
+    .col-1{
+      flex-basis: 100%;
+    }
+    .col-1 h1{
+      font-size: 1px;
+    }
+    .col-1 p{
+      font-size: 10px;
+    }
+
+  }
+</style>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-1">
+        <h1>SKETCH THE ART</h1><br>
+        <h2>Description</h2><br>
+        <p>Don't miss your chance to be a part of this extraordinary event, where art ,colour,creativity & innovation collide to create a truly unforgettable & colourful experience. Register now for LEO FEST's Artistic Showcase and let your creativity soar colourfully!        </p> 
+             <br> <h2>Rules and Regulations</h2><br>
+              <p>1. The competition is open to all currently enrolled students at the college, both registered beforehand and
+                those who register on the spot before the competition begins <br>
+                2.On the day of the competition, participants will be provided with on-spot topics or prompts to inspire
+                their pencil artwork. These topics will be revealed at the start of the competition, allowing participants to
+                showcase their creativity and adaptability. <br>
+                3.Only pencil art is allowed for this competition. Participants must use graphite pencils or charcoal
+                pencils for their creations <br>
+                4. Participants have one hour to complete their pencil artwork from start to finish. <br>
+                5. Participants must submit their finished pencil artwork to the organizers before the time limit expires. <br>
+                6. Participants must bring their own pencils and sharpener to ensure that they maintain a sharp pencil 
+                point throughout the competition.</p><br>
+                <h2>Student Co-ordinators</h2><br>
+                <p>1.NITYA DHANUSH - III YEAR - 9345724512 <br>
+                   2.RAJAVENDAN R  - II  YEAR - 9444991878      <br>
+                   3.AADHISH K R   - II  YEAR - 6383063423</p>
+              
+            </div>
+      
+    </div>
+  </div>
+</body>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  .container{
+    color: white;
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom left,black 40%, rgb(71, 71, 71) 100%);
+    overflow: hidden;
+  }
+  .row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 0;
+  }
+  .col-1{
+    flex-basis: 100%;
+    position: relative;
+    margin-left: 50px;
+  }
+  .col-1 h1{
+    background: -webkit-linear-gradient(red, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 40px;
+    text-align: left;
+  }
+  .col-1 h2{
+    background: -webkit-linear-gradient( blue,skyblue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .col-1 p{
+    color: white;
+    font-weight: 100;
+    text-align: left;
+  }
+  .col-1::after{
+    content: '';
+    width: 10px;
+    height: 57px;
+    background: linear-gradient(to bottom left,white 40%,gray 50%);
+    position: absolute;
+    left: -40px;
+    top: 8px;
+  }
+  .col-2{
+    position: relative;
+    font-size: 20px;
+    flex-basis:60%;
+    display: flex;
+    align-items: center;
+  }
+  .col-2 .header{
+    color: #b7b7b7;
+  }
+  .hearder{
+    width: 30%;
+    z-index:10 ;
+  }
+  .color-box{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: linear-gradient(#ff54a2,#ff575a);
+    border-radius: 20px;
+    height: 100%;
+    width: 100%;
+    transform: translateX(5px);
+  }
+
+  @media only screen and(max-width:700px) {
+    .row{
+      flex-direction: column;
+      margin: 50px;
+    }
+    .col-2{
+      flex-basis:100%;
+      margin-bottom: 50px;
+    }
+     .header{
+      width:77% ;
+    }
+    .color-box{
+      transform: translateX(75px);
+    }
+    .col-1{
+      flex-basis: 100%;
+    }
+    .col-1 h1{
+      font-size: 1px;
+    }
+    .col-1 p{
+      font-size: 10px;
+    }
+
+  }
+</style>
+</html>

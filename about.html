@@ -2,12 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/dd9af7210e.js" crossorigin="anonymous"></script>
-    <title>About</title>
-</head>
-<body>
+    <title>ABOUT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="style.css">    
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        let next = document.querySelector('.next');
+        let prev = document.querySelector('.prev');
+        let slide = document.querySelector('.slide');
+    
+        next.addEventListener('click', function () {
+            let items = document.querySelectorAll('.item');
+            slide.appendChild(items[0].cloneNode(true));
+            slide.removeChild(items[0]);
+        });
+    
+        prev.addEventListener('click', function () {
+            let items = document.querySelectorAll('.item');
+            slide.insertBefore(items[items.length - 1].cloneNode(true), items[0]);
+            slide.removeChild(items[items.length - 1]);
+        });
+    });
+    
+</script>
+
 <style>
     *{
         margin: 0;
@@ -36,13 +55,14 @@ body{
     display: flex;
     flex-direction: column;
     height: 100vh;
+    background-image: url("images/event.jpg");
 }
 header{ 
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1rem 5%;
+    padding: 2rem 5%;
     display: flex;
     justify-content: space-between;
     align-items:center;
@@ -74,7 +94,10 @@ header .navbar a:hover{
 header .bg-nav{
     display: none;
 }
-/* nav end*/
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
+/* Design */
+
 a{
     text-decoration: none;
 }
@@ -143,7 +166,7 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit:fill;
     z-index: -1;
     opacity:90%;
 }
@@ -157,119 +180,194 @@ h1 {
     text-transform: uppercase;
     font-size: 2.5rem;
 }
-    </style>
-<header>
-    <img src="images/bit-logo.png" alt="LOGO" class="bitlogo">
-    <i class="fa-solid fa-bars toggle-btn"></i>
-    <nav class="navbar">
-        <a href="home.html">HOME</a>
-        <a href="home.html">EVENTS</a>
-        <a href="about.html">ABOUT</a>
-        <a href="resgister.html">REGISTER</a>
-    </nav>
-    <img src="images/leo.png" alt="leo-logo" class="bitlogo1">
-    <div class="bg-nav"></div>
-</header>
-  <section id="team">
-    <video id="video-background" autoplay muted >
-        <!-- Add your video file source(s) here -->
-        <source src="images/about-bg.mp4" type="video/mp4">
-        <!-- Add additional source elements for different video formats -->
-    </video>
+/* for nav*/
 
-      <h1 class="title-t" >
-          <strong>Advisor Committee</strong>
-      </h1>
-      <div class="container">
-          <div class="box">
-              <div class="top-bar"></div>
+@media(max-width:992px){
+    html{
+        font-size: 60%;
+    }
+    section{
+        padding: 0 5%;
+    }
+    header{
+        padding:2rem 5%;
+    }
+    .home .content h3{
+        font-size: 3.3rem;
+        line-height: 2.5rem;
+    }
+}
 
-                  <div class="details">
-                      <h1>Dr.C Palanisamy</h1>
-                      <h2>Principal/BIT</h2>
-                  </div>             
-              </div>
-          <div class="box">
-              <div class="top-bar"></div>
-                  <div class="details">
-                      <h1>D K Sivakumar</h1>
-                      <h2>Dean PDS/BIT</h2>
-                  </div>   
-              </div>
-            </div>
-      </div>
+@media(max-width:768px){
+    html{
+        font-size: 59%;
+    }
+    .toggle-btn{
+        display: block;
+    }
+    header .navbar{
+        position: absolute;
+        left: 0;
+        top: -300px;
+        width: 100%;
+        background:rgba(26, 26, 36, 0.884);
+        padding: 1rem 5%;
+        
+        overflow: hidden;
+        transform: .8s;
+        z-index: -2;
+    }
+    header .navbar.slide{
+        top: 100%;
+    }
+    header .navbar a{
+        display: block;
+        margin: 2rem 0;
+        font-size: 1.8rem;
+    }
+    header .bitlogo1{
+        position: absolute;
+        right: 12%;   
+    }
+    header .bg-nav{
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;height:fit-content;
+        background-color: rgba(26, 26, 36, 0.671);
+        z-index: -1;
+        transition: 1s;
+    }
+    section{
+        height:fit-content;
+    }
+}
 
-      <h1 class="title-t" >
-          <strong> Converner</strong>
-      </h1>
-      
-     <div class="container">
-          <div class="box">
-              <div class="top-bar"></div>
+@media(max-width:660px){
+    html{
+        font-size: 55%;
+    }
+    header .navbar.slide{
+        top: 78px;
+    }
+}
+@media(max-width:330px){
+    html{
+        font-size: 50%;
+    }
+    head .bitlogo1{
+        right: 15%;
+    }
+}
+</style>
+</head>
+<body>
+    <header>
+        <img src="images/bit-logo.png" alt="LOGO" class="bitlogo">
+        <i class="fa-solid fa-bars toggle-btn"></i>
+        <nav class="navbar">
+            <a href="home.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="resgister.html">REGISTER</a>
+        </nav>
+        <img src="images/leo.png" alt="leo-logo" class="bitlogo1">
+        <div class="bg-nav"></div>
+    </header>
 
-                  <div class="details">
-                     <h1> Dr.Subhapriya P</h1>
-                      <h2>HOD-CHEMISTRY/BIT</h2>
-                  </div>             
-              </div>        
+
+    <section id="team">
+        <video id="video-background" autoplay muted >
+            <!-- Add your video file source(s) here -->
+            <source src="images/event.jpg">
+            <!-- Add additional source elements for different video formats -->
+        </video>
+    
+          <h1 class="title-t" >
+              <strong>Advisor Committee</strong>
+          </h1>
+          <div class="container">
               <div class="box">
-                <div class="top-bar"></div>
-  
-                    <div class="details">
-                        <h1>Dr.Murali Krishnan M</h1>
-                        <h2>Assistant Professor level-II</h2>
-                    </div>             
+                  <div class="top-bar"></div>
+    
+                      <div class="details">
+                          <h1>Dr.C Palanisamy</h1>
+                          <h2>Principal/BIT</h2>
+                      </div>             
+                  </div>
+              <div class="box">
+                  <div class="top-bar"></div>
+                      <div class="details">
+                          <h1>D K Sivakumar</h1>
+                          <h2>Dean PDS/BIT</h2>
+                      </div>   
+                  </div>
                 </div>
-                <div class="box">
+          </div>
+    
+          <h1 class="title-t" >
+              <strong> Converner</strong>
+          </h1>
+          
+         <div class="container">
+              <div class="box">
+                  <div class="top-bar"></div>
+    
+                      <div class="details">
+                         <h1> Dr.Subhapriya P</h1>
+                          <h2>HOD-CHEMISTRY/BIT</h2>
+                      </div>             
+                  </div>        
+                  <div class="box">
                     <div class="top-bar"></div>
       
                         <div class="details">
-                            <h1>Prof.Nithiya Priya B T</h1>
-                            <h2>Assistant Professor</h2>
+                            <h1>Dr.Murali Krishnan M</h1>
+                            <h2>Assistant Professor level-II</h2>
                         </div>             
                     </div>
-      </div>
-    
-      <h1 class="title-t" >
-        <strong>Students Secretaries</strong>
-    </h1>
-    <div class="container">
-        <div class="box">
-            <div class="top-bar"></div>
-
-                <div class="details">
-                    <h1>Ram Mathan</h1>
-                    <h2>CSE DEPARTMENT / IV YEAR</h2>
-                </div>            
-            </div>
+                    <div class="box">
+                        <div class="top-bar"></div>
+          
+                            <div class="details">
+                                <h1>Prof.Nithiya Priya B T</h1>
+                                <h2>Assistant Professor</h2>
+                            </div>             
+                        </div>
+          </div>
+        
+          <h1 class="title-t" >
+            <strong>Students Secretaries</strong>
+        </h1>
+        <div class="container">
             <div class="box">
                 <div class="top-bar"></div>
     
                     <div class="details">
-                        <h1>Niveditaa T A</h1>
-                        <h2>CSE DEPARTMENT / IV YAER</h2>
-                    </div> 
+                        <h1>Ram Mathan</h1>
+                        <h2>CSE DEPARTMENT / IV YEAR</h2>
+                    </div>            
                 </div>
-     </div>  
-
-
-     <h1 class="title-t" >
-        <strong>Web Creators</strong>
-    </h1>
-     <div class="container">
-        <div class="box">
-            <div class="top-bar"></div>
-
-                <div class="details">
-                    <h1>Aravindkumar R</h1>
-                    <h2>CSE DEPARTMENT / II YEAR</h2>
-                </div>             
-            </div>
+                <div class="box">
+                    <div class="top-bar"></div>
+        
+                        <div class="details">
+                            <h1>Niveditaa T A</h1>
+                            <h2>CSE DEPARTMENT / IV YAER</h2>
+                        </div> 
+                    </div>
+         </div>  
+    
+    
+         <h1 class="title-t" >
+            <strong>    </strong>
+        </h1>
+         <div class="container">
             <div class="box">
                 <div class="top-bar"></div>
     
                     <div class="details">
-                        <h1>Mounees Kumar R</h1>
+                        <h1>Aravindkumar R</h1>
                         <h2>CSE DEPARTMENT / II YEAR</h2>
                     </div>             
                 </div>
@@ -277,7 +375,7 @@ h1 {
                     <div class="top-bar"></div>
         
                         <div class="details">
-                            <h1>Tharun Kiruthik K S</h1>
+                            <h1>Mounees Kumar R</h1>
                             <h2>CSE DEPARTMENT / II YEAR</h2>
                         </div>             
                     </div>
@@ -285,11 +383,36 @@ h1 {
                         <div class="top-bar"></div>
             
                             <div class="details">
-                                <h1>Bharath T</h1>
+                                <h1>Tharun Kiruthik K S</h1>
                                 <h2>CSE DEPARTMENT / II YEAR</h2>
                             </div>             
                         </div>
-    </div>
-  </section>
+                        <div class="box">
+                            <div class="top-bar"></div>
+                
+                                <div class="details">
+                                    <h1>Bharath T</h1>
+                                    <h2>CSE DEPARTMENT / II YEAR</h2>
+                                </div>             
+                            </div>
+        </div>
+      </section>
+      
 </body>
+<script>
+    const bars = document.querySelector('.toggle-btn');
+const navbar = document.querySelector('header .navbar'); 
+bars.addEventListener('click',function(){
+    if(bars.classList.contains('fa-bars')){
+        bars.classList.remove('fa-bars');
+        bars.classList.add('fa-xmark');
+        navbar.classList.add('slide');
+    }
+    else {
+        bars.classList.remove('fa-xmark');
+        bars.classList.add('fa-bars');
+        navbar.classList.remove('slide');
+    }
+})
+</script>
 </html>
