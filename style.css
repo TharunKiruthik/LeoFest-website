@@ -51,7 +51,9 @@
     .navbar {
         flex-direction: column; /* Switch to a column layout */
     }
-
+	.home{
+		flex-direction: row;
+	}
     .dropdown-content {
         position: static;
         display: none;
@@ -103,12 +105,66 @@ body{
     display: flex;
     flex-direction: column;
     height: 100vh;
+	background-color: rgb(17, 17, 17);
     cursor: url("images/cursor.png"),auto;
 }
 .home {
+	margin-top:3%;
+    position: relative;
+    min-height: 80vh;
+    overflow: hidden;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.new{
     position: relative;
     min-height: 100vh;
     overflow: hidden;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.new .image{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200rem;
+}
+.new .content h2 {
+	width: 200%;
+    font-size: 2.5rem;
+    padding-top: 5;
+    color: white;
+    line-height: 5.3rem;
+    font-family:monospace;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+.text1{
+	width: 100%;
+	height: fit-content;
+    font-size: 1.9rem;
+    padding-top: 5;
+    color: white;
+    line-height: 3.3rem;
+    font-family:monospace;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+.events{
+	min-height: 60vh;
+	margin-top: -15rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	font-family: "Lato", "Segoe Ui", -apple-system, BlinkMacSystemFont, sans-serif;
+	/* Adjust padding and margin for smaller screens */
+	padding: 20px;
 }
 
 #video-background {
@@ -127,9 +183,7 @@ body{
             color: #fff;
             position: relative;
             text-align: left;
-        }
-
-        
+}
 header{ 
     position: fixed;
     top: 0;
@@ -166,11 +220,6 @@ header .navbar a:hover{
 header .bg-nav{
     display: none;
 }
-.home{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 .content{
 	width: 100%;
 	height: auto;
@@ -179,12 +228,11 @@ header .bg-nav{
 	
 	width: 200%;
 	margin-left: 5rem;
-    font-size: 8rem; 
+    font-size: 15rem; 
 	background-image: linear-gradient(90deg, rgb(217, 204, 65) 0%, rgb(186, 163, 51) 35%, rgba(140,165,115,1) 100%); /* Adjust colors as desired */
     -webkit-background-clip: text; /* For webkit-based browsers */
     background-clip: text;
     color: transparent;
-    line-height: 5.3rem;
     font-family: 'Protest Guerrilla', sans-serif;/*Revolution*/
 	
   font-optical-sizing: auto;
@@ -193,7 +241,7 @@ header .bg-nav{
   
 }
 .home .content h2 {
-	width: 200%;
+	width: auto;
     font-size: 2.5rem;
     padding-top: 5;
     color: white;
@@ -247,9 +295,14 @@ header .bg-nav{
         padding:2rem 5%;
     }
     .home .content h3{
+        font-size: 5.3rem;
+        line-height: 2.5rem;
+    }
+    .new .content h2{
         font-size: 3.3rem;
         line-height: 2.5rem;
     }
+	
 }
 
 @media(max-width:768px){
@@ -297,8 +350,11 @@ header .bg-nav{
         height:fit-content;
     }
     .home{
-        flex-direction: column;
+        flex-direction: row;
     }
+	.new{
+		flex-direction: row;
+	}
     .garuda{
         margin-top: 8rem;
     }
@@ -316,11 +372,38 @@ header .bg-nav{
     header .navbar.slide{
         top: 78px;
     }
+	.home{
+		flex-wrap:wrap;
+	}
+	.home .content h3{
+        font-size: 6.3rem;
+        line-height:100%;
+    }
+    .new .content h2{
+        font-size: 3.3rem;
+        line-height: 2.5rem;
+    }
 }
 @media(max-width:434px){
     .home .image{
         width: 40rem;
     }
+	.new{
+		padding: 1%;
+		flex-direction: column;
+		
+	}
+	.new .content{
+		margin-top:  30rem;
+		
+		
+	}
+	.new .content .text1{
+		height:fit-content;
+		font-size: 2rem;
+		
+		
+	}
 }
 @media(max-width:330px){
     html{
@@ -432,26 +515,7 @@ ul li a:hover{
   padding: 0;
   box-sizing: border-box;
 }
-.events{
-  min-height: 50vh;
-  padding: 40px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  background-image: url("https://images3.alphacoders.com/760/thumb-440-760465.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  font-family: "Lato", "Segoe Ui", -apple-system, BlinkMacSystemFont, sans-serif;
-  /* Adjust padding and margin for smaller screens */
-  padding: 20px;
-}
 
-  .map{
-    background-image: url("https://images3.alphacoders.com/760/thumb-440-760465.webp");
-    background-repeat:no-repeat;
-    background-size:cover;
-  }
   .hi h1{
     font-size: 2.5rem;
     text-align: center;
