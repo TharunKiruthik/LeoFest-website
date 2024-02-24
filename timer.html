@@ -11,247 +11,75 @@
 	<style>
 
 
-body {
-  display: flex;
+body{
+        display: flex;
     flex-direction: column;
     height: 100vh;
- margin-top: 10%;
-  font-family: Arial, Helvetica, sans-serif;
- background-color: black;
- cursor: url("images/cursor.png"),auto;
-}
-
-h1.demo-title {
-  text-align: center;
-  font-size: 30px;
-  font-weight: 600;
-  color: #2A293E;
-  letter-spacing: 2px;
-}
-
-h1.demo-title a {
-  font-size: 16px;
-  font-weight: 300;
-}
-
-.pricing-table {
-  display: flex;
-  flex-flow: row wrap;
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-  background: transparent;
-}
-
-.pricing-table .ptable-item {
-  width: 33.33%;
-  padding: 0 15px;
-  margin-bottom: 30px;
-}
-
-@media (max-width: 992px) {
-  .pricing-table .ptable-item {
-    width: 33.33%;
-  }
-}
-
-@media (max-width: 763px) {
-  .pricing-table .ptable-item {
-    width: 50%;
-  }
-}
-
-@media (max-width: 576px) {
-  .pricing-table .ptable-item {
-    width: 100%;
-  }
-}
-
-.pricing-table .ptable-single {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.pricing-table .ptable-header,
-.pricing-table .ptable-body,
-.pricing-table .ptable-footer {
-  position: relative;
-  width: 100%;
-  text-align: center;
-  overflow: hidden;
-}
-
-.pricing-table .ptable-status ,
-.pricing-table .ptable-title,
-.pricing-table .ptable-price,
-.pricing-table .ptable-description,
-.pricing-table .ptable-action {
-  position: relative;
-  width: 100%;
-  text-align: center;
-}
-
-.pricing-table .ptable-single {
-  background: #f6f8fa;
-}
-
-.pricing-table .ptable-single:hover {
-  box-shadow: 0 0 10px #999999;
-}
-
-.pricing-table .ptable-header {
-  margin: 0 30px;
-  padding: 30px 0 45px 0;
-  width: auto;
-  background:#49371B;
-}
-
-.pricing-table .ptable-header::before,
-.pricing-table .ptable-header::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 0;
-  height: 0;
-  border-bottom: 100px solid #f6f8fa;
-}
-
-.pricing-table .ptable-header::before {
-  right: 50%;
-  border-right: 250px solid transparent;
-}
-
-.pricing-table .ptable-header::after {
-  left: 50%;
-  border-left: 250px solid transparent;
-}
-
-.pricing-table .ptable-item.featured-item .ptable-header {
-  background: grey
-  ;
-}
-
-.pricing-table .ptable-status {
-  margin-top: -30px;
-}
-
-.pricing-table .ptable-status span {
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 30px;
-  padding: 5px 0;
-  text-align: center;
-  color: #FF6F61;
-  font-size: 14px;
-  font-weight: 300;
-  letter-spacing: 1px;
-  background: #2A293E;
-}
-
-.pricing-table .ptable-status span::before,
-.pricing-table .ptable-status span::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 0;
-  height: 0;
-  border-bottom: 10px solid #FF6F61;
-}
-
-.pricing-table .ptable-status span::before {
-  right: 50%;
-  border-right: 25px solid transparent;
-}
-
-.pricing-table .ptable-status span::after {
-  left: 50%;
-  border-left: 25px solid transparent;
-}
-
-.pricing-table .ptable-title h2 {
-  color: #ffffff;
-  font-size: 24px;
-  font-weight: 300;
-  letter-spacing: 2px;
-}
-
-.pricing-table .ptable-price h2 {
-  margin: 0;
-  color: #ffffff;
-  font-size: 45px;
-  font-weight: 700;
-  margin-left: 15px;
-}
-
-.pricing-table .ptable-price h2 small {
-  position: absolute;
-  font-size: 18px;
-  font-weight: 300;
-  margin-top: 16px;
-  margin-left: -15px;
-}
-
-.pricing-table .ptable-price h2 span {
-  margin-left: 3px;
-  font-size: 16px;
-  font-weight: 300;
-}
-
-.pricing-table .ptable-body {
-  padding: 20px 0;
-}
-
-.pricing-table .ptable-description ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.pricing-table .ptable-description ul li {
-  color: #2A293E;
-  font-size: 24px;
-  font-weight: 300;
-  letter-spacing: 1px;
-  padding: 7px;
-  border-bottom: 1px solid #dedede;
-}
-
-.pricing-table .ptable-description ul li:last-child {
-  border: none;
-}
-
-.pricing-table .ptable-footer {
-  padding-bottom: 30px;
-}
-
-.pricing-table .ptable-action a {
-  display: inline-block;
-  padding: 10px 20px;
-  color: #FF6F61;
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 2px;
-  text-decoration: none;
-  background: #2A293E;
-}
-
-.pricing-table .ptable-action a:hover {
-  color: #2A293E;
-  background: #FF6F61;
-}
-
-.pricing-table .ptable-item.featured-item .ptable-action a {
-  color: #2A293E;
-  background: #FF6F61;
-}
-
-.pricing-table .ptable-item.featured-item .ptable-action a:hover {
-  color: #FF6F61;
-  background: #2A293E;
-}
-	</style>
+        background-image: url(images/offer.jpg);
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        color: white;  
+        padding: 1rem;
+    }
+    *::selection{
+        background: #f00;
+        color: #fff;
+    }:root{
+        --primary-color: #f14f4f;
+        --secondary-color: #ffffff;
+    }html{
+        overflow-x: hidden ;
+    }
+    .container{
+       margin-top: 6rem;
+    }
+    .title{
+        margin: 0 auto;
+        width: 100%;
+        max-width: 40rem;
+        font-size: 4rem;
+        text-align: center;
+    
+    }
+  
+    .card{
+        width: 90%;
+        max-width: 400px;
+        padding: 5rem 2.5rem;
+        border-radius: 1rem;
+        border: 1px solid transparent;
+        backdrop-filter: blur(1rem);
+        box-shadow: 1.3rem 1.3rem 1.3rem rgba(0, 0, 0, 0.5);
+        border-top-color: rgba(255, 255, 255, 0.5);
+        border-left-color: rgba(255, 255, 255, 0.5);
+        border-bottom-color: rgba(255, 255, 255, 0.1);
+        border-right-color: rgba(255, 255, 255, 0.1);
+    }
+    .cb1{
+        background: linear-gradient(to right bottom,rgba(255,255,255,0.5),rgba(255,255,255,0.3));
+        color: black;
+    }
+    .cb2{
+        color: black;
+        background: linear-gradient(to right bottom,rgba(255,255,255,0.5),rgba(255,255,255,0.3));
+    
+    }
+    .card-number{
+        color:rgba(255, 255, 255, 0.5) ;
+        font-size: 8rem;
+        z-index: -1;
+        position: absolute;
+        top: -1rem;
+        right: 2.5rem;
+    }
+    .btn{
+        border-radius: 2rem;
+    }
+    .btn:hover{
+        box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.3);
+    }
+    </style>
   <header>
     <img src="images/bann.png" alt="LOGO" class="bitlogo">
     <i class="fa-solid fa-bars toggle-btn"></i>
@@ -276,116 +104,48 @@ h1.demo-title a {
     <img src="images/leo.png" alt="leo-logo" class="bitlogo1">
     <div class="bg-nav"></div>
 </header>
-	<h1 class="demo-title">
-		PRICES<br>
-	  </h1>
-	  <div class="pricing-table">
-		<div class="ptable-item">
-		  <div class="ptable-single">
-			<div class="ptable-header">
-			  <div class="ptable-title">
-				<h2>REGISTRATION FEES</h2>
-			  </div>
-			  <div class="ptable-price">
-				<h2><small>₹</small>350<span>/ person</span></h2>
-			  </div>
-			</div>
-			<div class="ptable-body">
-			  <div class="ptable-description">
-				<ul>
-				  <li>2 TECHNICAL + <BR>
-            3 NON-TECHNICAL</li>
-				</ul>
-			  </div>
-			</div><BR>
-			<div class="ptable-footer">
-			  <div class="ptable-action">
-				<a href="">Buy Now</a>
-			  </div>
-			</div>
-		  </div>
-		</div>
-		<div class="ptable-item">
-		  <div class="ptable-single">
-			<div class="ptable-header" style="background-color:#AE8625;">
-			  <div class="ptable-title">
-				<h2>REGISTRATION FEES</h2>
-			  </div>
-				<BR><BR>
-			  <div class="ptable-price">
-			  </div>
-			</div>
-			<div class="ptable-body">
-			  <div class="ptable-description">
-				<ul>
-				  <li>ROBOREVOLT-₹100/PERSON<BR>
+<div class="container">
+  <h1 class="tilte text-center py-4"> Prices</h1>
+  <div class="row">
+      <div class="col-md-6 d-flex justify-content-center">
+          
+          <div class="card m-2 cb1 text-center" >
+              
+              <div class="card-body">
 
-				</ul>
-			  </div>
-			</div><BR>
-			  <BR>
-			  <BR>
-			<div class="ptable-footer">
-			  <div class="ptable-action">
-				<a href="">Buy Now</a>
-			  </div>
-			</div>
-		  </div>
-		</div>
+                <h1 class="card-title mb-4"> Single Price Event</h1>
+                <p class="card-text" style="color: rgb(16, 16, 16);">
+                  <H4>Workshop - Rs: 100</H4><br>
+                  <H4>Robo Revolt - Rs: 100</H4><br>
+                  <H4>Action & Cut - Rs: 100</H4><br>
+                 <H4>Meme Creation - Rs: 50</H4> <br>
+                </p>
+                <a href="https://forms.gle/F6SeLrzsEyinj6er7" class="btn btn-outline-light">REGISTER</a>
+              </div>
+            </div>
 
-	  
-		<div class="ptable-item">
-		  <div class="ptable-single">
-			<div class="ptable-header" style="background-color:#AE8625;">
-			  <div class="ptable-title">
-				<h2>REGISTRATION FEES</h2>
-			  </div>
-				<BR><BR>
-			  <div class="ptable-price">
-			  </div>
-			</div>
-			<div class="ptable-body">
-			  <div class="ptable-description">
-				<ul>
-				  <li>ACTION & CUT-₹100/PERSON<BR>
 
-				</ul>
-			  </div>
-			</div>
-			  <BR><BR><BR><BR>
-			<div class="ptable-footer">
-			  <div class="ptable-action">
-				<a href="">Buy Now</a>
-			  </div>
-			</div>
-		  </div>
-		</div>
+      </div>
+      <div class="col-md-6 d-flex justify-content-center">
 
-    <div class="ptable-item featured-item">
-		  <div class="ptable-single">
-			<div class="ptable-header">
-			  <div class="ptable-status">
-			  </div>
-			  <div class="ptable-title">
-				<h2> <br> REGISTRATION FEES Event</h2><br>
-			  </div>
-			</div>
-			  <BR><BR><BR>
-			<div class="ptable-body">
-			  <div class="ptable-description">
-				<ul>
-          <li>MEME CREATION- ₹50/PERSON</li><br>
-				</ul>
-			  </div>
-			</div>
-			<div class="ptable-footer">
-			  <div class="ptable-action">
-				<a href="">Buy Now</a>
-			  </div>
-			</div>
-		  </div>
-		</div>
+          <div class="card m-2 cb2 text-center" >
+              
+              <div class="card-body">
 
+                <h1 class="card-title mb-4"> Combo Price  Event</h1>
+                <h2 class="card-title mb-4" style="color:WHITE; font-weight:bolder ;">Rs: 250</h2>
+                <p class="card-text"> <H3>2 TECHNICAL </H3><H3> 2 NON-TECHNICAL </H3><BR>
+                  <H4>SINGLE LUNCH</H4></p>
+                <a href="https://forms.gle/F6SeLrzsEyinj6er7" class="btn btn-outline-light">REGISTER</a>
+              </div>
+            </div>
+
+      </div>
+  </div>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     
 </body>
 

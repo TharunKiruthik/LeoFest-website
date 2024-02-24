@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<style>
+
+    body{
+        background-image: url("images/offer.jpg");
+        background-size: cover;
+        background-position: center ;
+        color: white;
+        margin-top: 10rem;
+
+    }
+    .title{
+        margin: 0 auto;
+        width: 100%;
+        max-width: 40rem;
+        font-size: 2rem;
+        text-align: center;
+    }
+    .card1{
+        width: 90%;
+        max-width: 400px;
+        padding: 5rem 2.5rem;
+        border-radius: 1px solid transparent;
+        backdrop-filter: blur(1rem);
+        box-shadow: 1.3rem 1.3rem 1.3rem rgba(0, 0, 0, 0.5);
+        border-top-color: rgba(255, 255, 255, 0.5);
+        border-left-color: rgba(255, 255, 255, 0.5);
+        border-bottom-color: rgba(255, 255, 255, 0.1);
+        border-right-color: rgba(255, 255, 255, 0.1);        
+    }
+    .cb1{
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    .cb2{
+        color: black;
+        background: linear-gradient(to right bottom,rgba(255,255,255,0.5),rgba(255,255,255,0.3));
+    }
+    .btn{
+        border-radius: 2rem;
+    }
+    .btn:hover{
+        box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.3);
+    }
+   
+
+</style>
+<body>
+    <header>
+        <img src="images/bann.png" alt="LOGO" class="bitlogo">
+        <i class="fa-solid fa-bars toggle-btn"></i>
+        <nav class="navbar">
+          <a href="index.html">HOME</a>
+          <div class="dropdown">
+              <a href="#">EVENTS <i class="fas fa-caret-down"></i></a>
+              <div class="dropdown-content">
+                  <a href="home-to-techevent-loader.html">Technical Events</a>
+                  <a href="home-to-nontech-loader.html">Non-Technical Events</a>
+              </div>
+          </div>
+          <a href="#footer">CONTACT</a>
+          <a href="timer.html" class="animated-button1">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Register
+            </a>
+      </nav>
+      
+        <img src="images/leo.png" alt="leo-logo" class="bitlogo1">
+        <div class="bg-nav"></div>
+    </header>
+    <div class="container">
+        <h1 class="title text-center py-4">PRICES</h1>
+        <div class="row">
+            <div class="col-md-6 d-flex justify-content-center">
+                <div class="card1 n-2 cb1 text-center" >
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, minus? Ipsum, enim. Inventore iste, alias veniam pariatur modi assumenda officia maiores commodi illo exercitationem culpa reprehenderit sapiente consequuntur placeat beatae! title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-outline-light">Go somewhere</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-6 d-flex justify-content-center">
+                <div class="card1 n-2 cb2 text-center" >
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, minus? Ipsum, enim. Inventore iste, alias veniam pariatur modi assumenda officia maiores commodi illo exercitationem culpa reprehenderit sapiente consequuntur placeat beatae! title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-outline-light">Go somewhere</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script>
+    const bars = document.querySelector('.toggle-btn');
+const navbar = document.querySelector('header .navbar'); 
+bars.addEventListener('click',function(){
+    if(bars.classList.contains('fa-bars')){
+        bars.classList.remove('fa-bars');
+        bars.classList.add('fa-xmark');
+        navbar.classList.add('slide');
+    }
+    else {
+        bars.classList.remove('fa-xmark');
+        bars.classList.add('fa-bars');
+        navbar.classList.remove('slide');
+    }
+})
+</script>
+</html>
