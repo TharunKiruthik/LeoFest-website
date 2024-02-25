@@ -1,597 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>REGISTER</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <script>
-    const bars = document.querySelector('.toggle-btn');
-const navbar = document.querySelector('header .navbar'); 
-bars.addEventListener('click',function(){
-    if(bars.classList.contains('fa-bars')){
-        bars.classList.remove('fa-bars');
-        bars.classList.add('fa-xmark');
-        navbar.classList.add('slide');
-    }
-    else {
-        bars.classList.remove('fa-xmark');
-        bars.classList.add('fa-bars');
-        navbar.classList.remove('slide');
-    }
-})
-  </script>
-	<style>
-        
-header{ 
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 2rem 5%;
-  display: flex;
-  justify-content: space-between;
-  align-items:center;
-  z-index: 1000;
-  height:fit-content;
-  background-color: rgba(26, 26, 36, 0.765);
+  <header>
+    <img src="images/bann.png" alt="LOGO" class="bitlogo">
+    <i class="fa-solid fa-bars toggle-btn"></i>
+    <nav class="navbar">
+      <a href="index.html">HOME</a>
+      <div class="dropdown">
+          <a href="#">EVENTS <i class="fas fa-caret-down"></i></a>
+          <div class="dropdown-content">
+              <a href="home-to-techevent-loader.html">Technical Events</a>
+              <a href="home-to-nontech-loader.html">Non-Technical Events</a>
+          </div>
+      </div>
+      <a href="acc.html">ACCOMADATION</a>
+      <a class="reg" href="resgister.html">REGISTER</a>
+  </nav>
+  
+    <img src="images/leo.png" alt="leo-logo" class="bitlogo1">
+    <div class="bg-nav"></div>
+</header>
+    <section class="pricing-plans">
+        <div class="pricing-card basic">
+          <div class="heading">
+            <h4>Single Events</h4>
+          </div>
+          <p class="price">
+            ₹350
+            <sub>/person</sub>
+          </p>
+          <ul class="features">
+            <li>
+              <i class="fa-solid fa-check"></i>
+              <strong>▷ Two</strong> Technicals
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i>
+              <strong>▷ Three</strong> Non-Techniclas
+            </li>
+            
+          </ul>
+          <button class="cta-btn" id="btn" >Register</button>
+        </div>
+        <div class="pricing-card standard">
+          <div class="heading">
+            <h4>Special Events </h4>
+          </div>
+          <p class="price">
+            ₹100
+            <sub>/person</sub>
+          </p>
+          <ul class="features">
+            <li>
+              <i class="fa-solid fa-check"></i>
+              <strong>▷ Action & Cut</strong>
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i>
+              <strong>▷ Robo Revolt</strong> 
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i>
+              <strong>▷ Meme Creation</strong> (for this only ₹50)
+            </li>
+           
+          </ul>
+          <button class="cta-btn" id="btn">Register</button>
+        </div>
+      </section>
+      <section>
+        <footer id="footer">
+                <h4>Registration Process</h4>
+                <p>▶ First the participants should register the Google-form using the register button given above<br>
+                   ▶ Then a MemberId will be send to your E-mail. <br>
+                   ▶ Using the MemberId the Team leader should register their Respective events Google-Form given in the Events Page.
+                </p>
+          </footer>
+      </section>
 
-
+</body>
+<style>
+ h4{
+    position: relative;
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 30px;
+    color: #f1bc0d;
+    text-transform: capitalize;
 }
-header .bitlogo{
-  position: relative;
-  width: 5rem;
-  height: 5rem;
-}
-header .bitlogo1{
-  position: relative;
-  width: 5rem;
-  height:5rem;
-}.navbar{
-  left: -10%;
-}
-header .navbar a{
-  text-decoration: none;
-  display:inline-block;
-  align-items: center;
-  justify-content:center;
-  font-size: 1rem;
-  margin-left: 3rem;
-  color: var(--secondary-color);
-  font-weight: 600;
-}
-header .navbar a:hover{
-  color:  red;
-}
-header .bg-nav{
-  display: none;
-}
-
-@media(max-width:992px){
-  html{
-      font-size: 60%;
-  }
-  section{
-      padding: 0 5%;
-  }
-  header{
-      padding:2rem 5%;
-  }
-  .home .content h3{
-      font-size: 3.3rem;
-      line-height: 2.5rem;
-  }
-}
-
-@media(max-width:768px){
-  html{
-      font-size: 59%;
-  }
-  .toggle-btn{
-      display: block;
-  }
-  header .navbar{
-      position: absolute;
-      left: 0;
-      top: -300px;
-      width: 100%;
-      background:rgba(26, 26, 36, 0.884);
-      padding: 1rem 5%;
-      
-      overflow: hidden;
-      transform: .8s;
-      z-index: -2;
-  }
-  header .navbar.slide{
-      top: 100%;
-  }
-  header .navbar a{
-      display: block;
-      margin: 2rem 0;
-      font-size: 1.8rem;
-  }
-  header .bitlogo1{
-      position: absolute;
-      right: 12%;   
-  }
-  header .bg-nav{
-      display: block;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;height:fit-content;
-      background-color: rgba(26, 26, 36, 0.671);
-      z-index: -1;
-      transition: 1s;
-  }
-  section{
-      height:fit-content;
-  }
+p{
+    position: relative;
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
 }
 
-@media(max-width:660px){
-  html{
-      font-size: 1rem;
-  }
-  header .navbar.slide{
-      top: 78px;
-  }
-}
-@media(max-width:330px){
-  html{
-      font-size: 1.5rem;
-  }
-  head .bitlogo1{
-      right: 15%;
-  }
-}
-@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
-
-*,
-*::before,
-*::after {
+    * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+  list-style: none;
+  font-family: "Open Sans", sans-serif;
 }
 
 body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-color: black;
+}
+
+.pricing-plans {
+  gap: 32px;
   display: flex;
-    flex-direction: column;
-    height: 100vh;
- margin-top: 10%;
-  font-family: Arial, Helvetica, sans-serif;
- background-color: black;
- cursor: url("images/cursor.png"),auto;
-}
-
-h1.demo-title {
-  text-align: center;
-  font-size: 30px;
-  font-weight: 600;
-  color: #2A293E;
-  letter-spacing: 2px;
-}
-
-h1.demo-title a {
-  font-size: 16px;
-  font-weight: 300;
-}
-
-.pricing-table {
-  display: flex;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
   width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
-  background: transparent;
+  padding: 64px;
 }
 
-.pricing-table .ptable-item {
-  width: 33.33%;
-  padding: 0 15px;
-  margin-bottom: 30px;
-}
-
-@media (max-width: 992px) {
-  .pricing-table .ptable-item {
-    width: 33.33%;
-  }
-}
-
-@media (max-width: 768px) {
-  .pricing-table .ptable-item {
-    width: 50%;
-  }
-}
-
-@media (max-width: 576px) {
-  .pricing-table .ptable-item {
-    width: 100%;
-  }
-}
-
-.pricing-table .ptable-single {
+.pricing-card {
+  --col: #e4e4e7;
   position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.pricing-table .ptable-header,
-.pricing-table .ptable-body,
-.pricing-table .ptable-footer {
-  position: relative;
-  width: 100%;
-  text-align: center;
-  overflow: hidden;
-}
-
-.pricing-table .ptable-status ,
-.pricing-table .ptable-title,
-.pricing-table .ptable-price,
-.pricing-table .ptable-description,
-.pricing-table .ptable-action {
-  position: relative;
-  width: 100%;
+  min-width: 360px;
+  padding: 32px;
+  padding-bottom: 96px;
+  border-radius: 4px;
+  border: 1px solid #262626;
+  background-color: #26262620;
+  box-shadow: 0 0 32px transparent;
   text-align: center;
 }
 
-.pricing-table .ptable-single {
-  background: #f6f8fa;
+.pricing-card.basic {
+  --col: #0891b2;
 }
 
-.pricing-table .ptable-single:hover {
-  box-shadow: 0 0 10px #999999;
+.pricing-card.standard {
+  --col: #059669;
 }
 
-.pricing-table .ptable-header {
-  margin: 0 30px;
-  padding: 30px 0 45px 0;
-  width: auto;
-  background:#49371B;
+.pricing-card.premium {
+  --col: #c026d3;
 }
 
-.pricing-table .ptable-header::before,
-.pricing-table .ptable-header::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 0;
-  height: 0;
-  border-bottom: 100px solid #f6f8fa;
+.pricing-card:hover {
+  border-color: var(--col);
+  background-color: #26262680;
+  box-shadow: 0 0 32px #171717;
+  transform: translateY(-16px) scale(1.02);
+  transition: all 0.5s ease;
 }
 
-.pricing-table .ptable-header::before {
-  right: 50%;
-  border-right: 250px solid transparent;
+.pricing-card > *:not(:last-child) {
+  margin-bottom: 32px;
 }
 
-.pricing-table .ptable-header::after {
-  left: 50%;
-  border-left: 250px solid transparent;
-}
-
-.pricing-table .ptable-item.featured-item .ptable-header {
-  background: grey
-  ;
-}
-
-.pricing-table .ptable-status {
-  margin-top: -30px;
-}
-
-.pricing-table .ptable-status span {
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 30px;
-  padding: 5px 0;
-  text-align: center;
-  color: #FF6F61;
-  font-size: 14px;
-  font-weight: 300;
-  letter-spacing: 1px;
-  background: #2A293E;
-}
-
-.pricing-table .ptable-status span::before,
-.pricing-table .ptable-status span::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 0;
-  height: 0;
-  border-bottom: 10px solid #FF6F61;
-}
-
-.pricing-table .ptable-status span::before {
-  right: 50%;
-  border-right: 25px solid transparent;
-}
-
-.pricing-table .ptable-status span::after {
-  left: 50%;
-  border-left: 25px solid transparent;
-}
-
-.pricing-table .ptable-title h2 {
-  color: #ffffff;
+.pricing-card .heading h4 {
+  padding-bottom: 12px;
+  color: var(--col);
   font-size: 24px;
-  font-weight: 300;
-  letter-spacing: 2px;
+  font-weight: normal;
 }
 
-.pricing-table .ptable-price h2 {
-  margin: 0;
-  color: #ffffff;
-  font-size: 45px;
-  font-weight: 700;
-  margin-left: 15px;
-}
-
-.pricing-table .ptable-price h2 small {
-  position: absolute;
-  font-size: 18px;
-  font-weight: 300;
-  margin-top: 16px;
-  margin-left: -15px;
-}
-
-.pricing-table .ptable-price h2 span {
-  margin-left: 3px;
-  font-size: 16px;
-  font-weight: 300;
-}
-
-.pricing-table .ptable-body {
-  padding: 20px 0;
-}
-
-.pricing-table .ptable-description ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.pricing-table .ptable-description ul li {
-  color: #2A293E;
-  font-size: 24px;
-  font-weight: 300;
-  letter-spacing: 1px;
-  padding: 7px;
-  border-bottom: 1px solid #dedede;
-}
-
-.pricing-table .ptable-description ul li:last-child {
-  border: none;
-}
-
-.pricing-table .ptable-footer {
-  padding-bottom: 30px;
-}
-
-.pricing-table .ptable-action a {
-  display: inline-block;
-  padding: 10px 20px;
-  color: #FF6F61;
+.pricing-card .heading p {
+  color: #a3a3a3;
   font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 2px;
-  text-decoration: none;
-  background: #2A293E;
+  font-weight: lighter;
 }
 
-.pricing-table .ptable-action a:hover {
-  color: #2A293E;
-  background: #FF6F61;
+.pricing-card .price {
+  position: relative;
+  color: var(--col);
+  font-size: 60px;
+  font-weight: bold;
 }
 
-.pricing-table .ptable-item.featured-item .ptable-action a {
-  color: #2A293E;
-  background: #FF6F61;
+.pricing-card .price sub {
+  position: absolute;
+  bottom: 14px;
+  color: #a3a3a3;
+  font-size: 14px;
+  font-weight: lighter;
 }
 
-.pricing-table .ptable-item.featured-item .ptable-action a:hover {
-  color: #FF6F61;
-  background: #2A293E;
+.pricing-card .features li {
+  padding-bottom: 16px;
+  color: #a3a3a3;
+  font-size: 16px;
+  font-weight: lighter;
+  text-align: left;
 }
-	</style>
-<header>
-        <img src="images/bann.png" alt="LOGO" class="bitlogo">
-        <i class="fa-solid fa-bars toggle-btn"></i>
-        <nav class="navbar">
-          <a href="index.html">HOME</a>
-          <div class="dropdown">
-              <a href="#">EVENTS <i class="fas fa-caret-down"></i></a>
-              <div class="dropdown-content">
-                  <a href="home-to-techevent-loader.html">Technical Events</a>
-                  <a href="home-to-nontech-loader.html">Non-Technical Events</a>
-              </div>
-          </div>
-          <a href="#footer">CONTACT</a>
-          <a href="timer.html" class="animated-button1">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            Register
-            </a>
-      </nav>
-      
-        <img src="images/leo.png" alt="leo-logo" class="bitlogo1">
-        <div class="bg-nav"></div>
-    </header>
 
+.pricing-card .features li i,
+.pricing-card .features li strong {
+  color: #e4e4e7;
+  font-size: 16px;
+  text-align: left;
+}
 
-	<h1 class="demo-title">
-		PRICES<br>
-	  </h1>
-	  <div class="pricing-table">
-		<div class="ptable-item">
-		  <div class="ptable-single">
-			<div class="ptable-header">
-			  <div class="ptable-title">
-				<h2>Bronze Card</h2>
-			  </div>
-			  <div class="ptable-price">
-				<h2><small>₹</small>250<span>/ person</span></h2>
-			  </div>
-			</div>
-			<div class="ptable-body">
-			  <div class="ptable-description">
-				<ul>
-				  <li>2 TECHNICAL + <BR>
-            2 NON-TECHNICAL</li>
-				  <li>SINGLE LUNCH</li>
-				</ul>
-			  </div>
-			</div>
-			<div class="ptable-footer">
-			  <div class="ptable-action">
-				<a href="">Buy Now</a>
-			  </div>
-			</div>
-		  </div>
-		</div>
-	  
-		<div class="ptable-item featured-item">
-		  <div class="ptable-single">
-			<div class="ptable-header">
-			  <div class="ptable-status">
-			  </div>
-			  <div class="ptable-title">
-				<h2> <br> Silver Card</h2>
-			  </div>
-			  <div class="ptable-price">
-				<h2><small>₹</small>350<span>/ person</span></h2>
-			  </div>
-			</div>
-			<div class="ptable-body">
-			  <div class="ptable-description">
-				<ul>
-				  <li>3 TECHNICAL + <BR>
-            3 NON-TECHNICAL</li>
-				  <li>SINGLE LUNCH</li>
-				</ul>
-			  </div>
-			</div>
-			<div class="ptable-footer">
-			  <div class="ptable-action">
-				<a href="">Buy Now</a>
-			  </div>
-			</div>
-		  </div>
-		</div>
-	  
-		<div class="ptable-item">
-		  <div class="ptable-single">
-			<div class="ptable-header" style="background-color:#AE8625;">
-			  <div class="ptable-title">
-				<h2>Gold Card</h2>
-			  </div>
-			  <div class="ptable-price">
-				<h2><small>₹</small>450<span>/ person</span></h2>
-			  </div>
-			</div>
-			<div class="ptable-body">
-			  <div class="ptable-description">
-				<ul>
-				  <li>4 TECHNICAL + <BR>
-            4 NON-TECHNICAL</li>
-				  <li>DOUBLE LUNCH</li>
+.pricing-card .features li strong {
+  padding-left: 24px;
+}
 
-				</ul>
-			  </div>
-			</div>
-			<div class="ptable-footer">
-			  <div class="ptable-action">
-				<a href="">Buy Now</a>
-			  </div>
-			</div>
-		  </div>
-		</div>
+.pricing-card .cta-btn {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid var(--col);
+  background-color: var(--col);
+  color: #e4e4e7;
+  font-size: 20px;
+  font-weight: bold;
+}
 
-    <div class="ptable-item featured-item">
-		  <div class="ptable-single">
-			<div class="ptable-header">
-			  <div class="ptable-status">
-			  </div>
-			  <div class="ptable-title">
-				<h2> <br> Single Price Event</h2><br>
-			  </div>
-			</div>
-			<div class="ptable-body">
-			  <div class="ptable-description">
-				<ul>
-				  <li>WORKSHOP - ₹100</li>
-				  <li>ROBOREVOLT - ₹100</li>
-          <li>ACTION & CUT - ₹100</li>
-          <li>MEME CREATION - ₹50</li><br>
-				</ul>
-			  </div>
-			</div>
-			<div class="ptable-footer">
-			  <div class="ptable-action">
-				<a href="">Buy Now</a>
-			  </div>
-			</div>
-		  </div>
-		</div>
+.pricing-card .cta-btn:active {
+  background-color: transparent;
+  color: var(--col);
+  transition: all 0.3s ease;
+}
 
-    <div class="ptable-item featured-item">
-		  <div class="ptable-single">
-			<div class="ptable-header">
-			  <div class="ptable-status">
-			  </div>
-			  <div class="ptable-title">
-				<h2> <br>Combo Offer</h2>
-        <h2 style="font-size: 15px;">(Except Meme Creation)</h2>
-			  </div>
-			</div>
-			<div class="ptable-body">
-			  <div class="ptable-description ">
-				<ul >
-				  <li style="font-size: 20px;">Any Card+Single Event = ₹50 OFF</li>
-				  <li style="font-size: 20px;">Any Card+Double Event = ₹100 OFF</li>
-          <li style="font-size: 20px;">Any Card+Triple Event = ₹150 OFF</li>
-				</ul>
-			  </div>
-			</div>
-			<div class="ptable-footer">
-			  <div class="ptable-action">
-				<a href="">Buy Now</a>
-			  </div>
-			</div>
-			  
-		  </div>
-		</div>
-		   <div class="ptable-item featured-item">
-		  <div class="ptable-single">
-			<div class="ptable-header">
-			  <div class="ptable-status">
-			  </div>
-			  <div class="ptable-title">
-				<h2> <br></h2><br>
-			  </div>
-			</div>
-			<div class="ptable-body">
-			  <div class="ptable-description">
-				<ul>
-				  <li></li>
-				  <li></li>
-          <li></li>
-          <li></li><br>
-				</ul>
-			  </div>
-			</div>
-			<div class="ptable-footer">
-			  <div class="ptable-action">
-				<a href="">Buy Now</a>
-			  </div>
-			</div>
-		  </div>
-		</div>
-	  </div>
-</body>
+</style>
+
+<script>
+ 
+    document.addEventListener("DOMContentLoaded", function() {
+        // Find the button element
+        var registerButton = document.querySelector('#btn');
+        
+        // Add a click event listener to the button
+        registerButton.addEventListener('click', function() {
+            // Perform navigation to the next page
+            window.location.href = 'https://forms.gle/VnG555BpB3eHhZfk8'; // Replace 'next-page.html' with the URL of your next page
+        });
+    });
+      const bars = document.querySelector('.toggle-btn');
+const navbar = document.querySelector('header .navbar'); 
+bars.addEventListener('click',function(){
+  if(bars.classList.contains('fa-bars')){
+      bars.classList.remove('fa-bars');
+      bars.classList.add('fa-xmark');
+      navbar.classList.add('slide');
+  }
+  else {
+      bars.classList.remove('fa-xmark');
+      bars.classList.add('fa-bars');
+      navbar.classList.remove('slide');
+  }
+})
+</script>
+<script>
+
+</script>
 </html>
