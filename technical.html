@@ -55,64 +55,23 @@
 html{
     font-size: 62%;
     overflow-x: hidden ;
+    background-color: rgba(26, 26, 36, 0.671);
 }
 body{
     display: flex;
     flex-direction: column;
     height: 100vh;
 }
-header{ 
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 2rem 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items:center;
-    z-index: 1000;
-    height:fit-content;
-    background-color: rgba(26, 26, 36, 0.765);
-}
-header .bitlogo{
-    position: relative;
-    width: 30rem;
-}
-header .bitlogo1{
-    position: relative;
-    width: 6rem;
-    height: 6rem;
-}
-header .navbar a{
-    display:inline-block;
-    justify-content:center;
-    font-size: 1.7rem;
-    margin-left: 3rem;
-    color: var(--secondary-color);
-    font-weight: 600;
-}
-header .navbar a:hover{
-    color:  red;
-}
-header .bg-nav{
-    display: none;
-}
+
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
 
 /* Design */
-
-
-html {
-  background-color: #ecf9ff;
-}
 body {
-  color: #272727;
   font-family: 'Quicksand', serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0;
   padding: 1rem;
-  background-image: url("images/bgtech.jpg");
   background-size: cover;
   height: 100%;
 
@@ -161,7 +120,7 @@ a{
   flex-wrap: wrap;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 10px;
 }
 
 .cards_item {
@@ -212,87 +171,6 @@ a{
   margin-bottom: 1.25rem;    
   font-weight: 400;
 }
-
-/* for nav*/
-
-@media(max-width:992px){
-    html{
-        font-size: 60%;
-    }
-    section{
-        padding: 0 5%;
-    }
-    header{
-        padding:2rem 5%;
-    }
-    .home .content h3{
-        font-size: 3.3rem;
-        line-height: 2.5rem;
-    }
-}
-
-@media(max-width:768px){
-    html{
-        font-size: 59%;
-    }
-    .toggle-btn{
-        display: block;
-    }
-    header .navbar{
-        position: absolute;
-        left: 0;
-        top: -300px;
-        width: 100%;
-        background:rgba(26, 26, 36, 0.884);
-        padding: 1rem 5%;
-        
-        overflow: hidden;
-        transform: .8s;
-        z-index: -2;
-    }
-    header .navbar.slide{
-        top: 100%;
-    }
-    header .navbar a{
-        display: block;
-        margin: 2rem 0;
-        font-size: 1.8rem;
-    }
-    header .bitlogo1{
-        position: absolute;
-        right: 12%;   
-    }
-    header .bg-nav{
-        display: block;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;height:fit-content;
-        background-color: rgba(26, 26, 36, 0.671);
-        z-index: -1;
-        transition: 1s;
-    }
-    section{
-        height:fit-content;
-    }
-}
-
-@media(max-width:660px){
-    html{
-        font-size: 55%;
-    }
-    header .navbar.slide{
-        top: 78px;
-    }
-}
-@media(max-width:330px){
-    html{
-        font-size: 50%;
-    }
-    head .bitlogo1{
-        right: 15%;
-    }
-}
 </style>
 </head>
 <body>
@@ -309,13 +187,7 @@ a{
           </div>
       </div>
       <a href="accomadation.html">ACCOMADATION</a>
-      <a href="timer.html" class="animated-button1">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        Register
-        </a>
+      <a class="reg" href="resgister.html">REGISTER</a>
   </nav>
   
     <img src="images/leo.png" alt="leo-logo" class="bitlogo1">
@@ -368,7 +240,7 @@ a{
 			  </div>
 			</div>
 		  </li>
-      <
+      
 </body>
 <script>
     const bars = document.querySelector('.toggle-btn');

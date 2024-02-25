@@ -27,7 +27,6 @@
     position: absolute;
     top: 100%; /* Position dropdown below the link */
     left: 0;
-    background-color: #a9a9a9;
     min-width: 160px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     z-index: 1;
@@ -39,9 +38,6 @@
     text-decoration: none;
     display: block;
 }
-
-
-
 .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -214,6 +210,13 @@ header .navbar a{
     color: var(--secondary-color);
     font-weight: 600;
 }
+header .navbar a.reg {
+    background: linear-gradient(90deg, rgb(217, 204, 65) 0%, rgb(186, 163, 51) 35%, rgba(140,165,115,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+	
+}
 header .navbar a:hover{
     color:  red;
 }
@@ -363,6 +366,11 @@ header .bg-nav{
         height: 20rem;
         margin-top: -5rem;
     }
+	.new .image{
+        width: 50rem;
+        height: 20rem;
+        margin-top: -5rem;
+    }
 }
 
 @media(max-width:660px){
@@ -378,6 +386,11 @@ header .bg-nav{
 	.home .content h3{
         font-size: 6.3rem;
         line-height:100%;
+		margin:auto;
+    }
+	.home .content h2{
+        font-size: 2rem;
+        line-height: 2.5rem;
     }
     .new .content h2{
         font-size: 3.3rem;
@@ -413,6 +426,10 @@ header .bg-nav{
         right: 15%;
     }
     .home .image{
+        width: 40rem;
+        height:25rem;
+    }
+	.new .image{
         width: 40rem;
         height:25rem;
     }
