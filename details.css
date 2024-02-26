@@ -22,7 +22,7 @@
   .col-1{
     flex-basis: 100%;
     position: relative;
-    margin-left: 50px;
+    margin-left: 40px;
   }
   .col-1 h1{
     background: -webkit-linear-gradient( 90deg, rgb(217, 204, 65) 0%, rgb(186, 163, 51) 35%, rgba(140,165,115,1) 100%);

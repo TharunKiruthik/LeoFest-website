@@ -191,7 +191,7 @@ header{
     align-items:center;
     z-index: 1000;
     height:fit-content;
-    background-color: rgba(26, 26, 36, 0.671);
+    background-color: rgba(8, 6, 6, 0.9);
 }
 header .bitlogo{
     position: relative;
@@ -226,6 +226,60 @@ header .bg-nav{
 .content{
 	width: 100%;
 	height: auto;
+}
+#aboutUs {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+}
+
+#aboutUs img {
+    width: 500px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.content {
+    margin: 20px 0;
+}
+
+.content h2 {
+    font-size: 50px;
+    color: #ffca70;
+}
+.hi{
+	font-size: 30px;
+    color: #ffca70;
+	text-align: center;
+
+}
+.content h4 {
+    font-size: 20px;
+    color: #fff;
+    margin: 10px 0;
+}
+
+.description {
+    color: #fff;
+    margin: 20px 0;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 100;
+}
+@media screen and (max-width: 790px) {
+    #aboutUs img {
+        width: 80%;
+    }
+	.hi{
+		font-size: 25px;
+		color: #ffca70;
+		text-align: center;
+	
+	}
+    #aboutUs {
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
 }
 .home .content h3 {
 	
@@ -532,13 +586,6 @@ ul li a:hover{
   padding: 0;
   box-sizing: border-box;
 }
-
-  .hi h1{
-    font-size: 2.5rem;
-    text-align: center;
-    margin-top: 20px;
-    color:white;
-  }
 /*timer css*/
 /* Font Styles */
 .heading-a {
